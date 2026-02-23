@@ -25,178 +25,1843 @@
         {
           "slideIndex": 0,
           "slideTitle": "What is React?",
-          "slideDescription": "Introduction to React.js",
+          "slideDescription": "React is a JavaScript library used to build fast and interactive user interfaces, especially for single-page applications. It is maintained by Meta and follows a component-based architecture that makes UI development modular and reusable.",
           "slidePoints": [
-            "React is a JavaScript library for building user interfaces",
-            "It is developed and maintained by Meta (Facebook)",
-            "It is component-based architecture",
-            "It uses a virtual DOM for efficient rendering"
+            "React is a JavaScript library for building user interfaces – It focuses only on the view layer (UI). Example: Creating dashboards, forms, admin panels.",
+            "Developed and maintained by Meta – Backed by Meta, which ensures long-term support and strong ecosystem growth.",
+            "Component-based architecture – UI is broken into small reusable pieces called components. Example: Navbar, Sidebar, Button as separate components.",
+            "Uses Virtual DOM – React updates only changed parts of UI instead of refreshing entire page, improving performance."
           ]
         },
         {
           "slideIndex": 1,
           "slideTitle": "Why React?",
-          "slideDescription": "Why React became popular",
+          "slideDescription": "React became popular because it simplifies UI development with reusable components, predictable code structure, and efficient rendering using Virtual DOM.",
           "slidePoints": [
-            "Reusable components reduce duplication",
-            "Declarative UI makes code predictable",
-            "Fast rendering using Virtual DOM",
-            "Strong ecosystem and community support"
+            "Reusable components reduce duplication – Write a Button component once and reuse everywhere.",
+            "Declarative UI – You describe what UI should look like based on state. React handles DOM updates.",
+            "Fast rendering – Virtual DOM compares previous and new state to update minimal changes.",
+            "Strong ecosystem – Huge community, libraries like Redux, React Router, Next.js."
           ]
         },
         {
           "slideIndex": 2,
           "slideTitle": "What is Virtual DOM?",
-          "slideDescription": "Understanding React rendering",
+          "slideDescription": "Virtual DOM is a lightweight JavaScript representation of the real DOM. React uses it to compare changes efficiently before updating the browser.",
           "slidePoints": [
-            "Virtual DOM is a lightweight copy of real DOM",
-            "React compares previous and current virtual DOM",
-            "Only changed elements are updated in real DOM",
-            "This process is called reconciliation"
+            "Lightweight copy of real DOM – Stored in memory, not in browser.",
+            "Diffing process – React compares old and new Virtual DOM trees.",
+            "Updates only changed elements – Instead of full re-render.",
+            "Reconciliation – The process of syncing Virtual DOM with real DOM."
           ]
         },
         {
           "slideIndex": 3,
           "slideTitle": "Components in React",
-          "slideDescription": "Building blocks of React",
+          "slideDescription": "Components are the core building blocks in React that help create modular and reusable UI elements.",
           "slidePoints": [
-            "Functional Components (Modern standard)",
-            "Class Components (Legacy approach)",
-            "Components return JSX",
-            "Components can be reusable and nested"
+            "Functional Components – Modern standard using hooks. Example: function Header() {}",
+            "Class Components – Older approach using lifecycle methods.",
+            "Return JSX – Components must return JSX structure.",
+            "Reusable and nested – Components can be inside other components."
           ]
         },
         {
           "slideIndex": 4,
           "slideTitle": "JSX",
-          "slideDescription": "JavaScript XML Syntax",
+          "slideDescription": "JSX is a syntax extension that allows writing HTML-like code inside JavaScript, which gets converted to React.createElement behind the scenes.",
           "slidePoints": [
-            "JSX allows writing HTML inside JavaScript",
-            "JSX gets converted to React.createElement",
-            "JSX must return a single parent element",
-            "We can embed JavaScript using {}"
+            "HTML inside JavaScript – Makes UI readable and clean.",
+            "Converted to React.createElement – JSX is not HTML, it’s JavaScript.",
+            "Single parent element – Must wrap elements inside one parent div or fragment.",
+            "Embed JS using {} – Example: <h1>{name}</h1>"
           ]
         },
         {
           "slideIndex": 5,
           "slideTitle": "Props",
-          "slideDescription": "Passing data between components",
+          "slideDescription": "Props are used to pass data from parent component to child component, making components dynamic and reusable.",
           "slidePoints": [
-            "Props means properties",
-            "Props are read-only",
-            "Used to pass data from parent to child",
-            "Helps make components dynamic"
+            "Props means properties – Similar to function parameters.",
+            "Read-only – Cannot modify inside child component.",
+            "Parent to child communication – Example: <User name='Kaushal' />",
+            "Dynamic rendering – Different values create different outputs."
           ]
         },
         {
           "slideIndex": 6,
           "slideTitle": "State",
-          "slideDescription": "Managing dynamic data",
+          "slideDescription": "State stores dynamic data inside a component and re-renders UI when updated.",
           "slidePoints": [
-            "State stores component-specific data",
-            "Updating state re-renders component",
-            "Managed using useState hook",
-            "State is mutable unlike props"
+            "Component-specific data – Example: counter value.",
+            "Triggers re-render – Updating state refreshes UI.",
+            "useState hook – const [count, setCount] = useState(0)",
+            "Mutable via setter – Unlike props."
           ]
         },
         {
           "slideIndex": 7,
           "slideTitle": "Hooks",
-          "slideDescription": "Using state and lifecycle in functional components",
+          "slideDescription": "Hooks allow functional components to use state and lifecycle features.",
           "slidePoints": [
-            "useState for state management",
-            "useEffect for side effects",
-            "useContext for global state",
-            "Custom hooks for reusable logic"
+            "useState – Manage state in functional components.",
+            "useEffect – Handle side effects like API calls.",
+            "useContext – Share global data without prop drilling.",
+            "Custom Hooks – Extract reusable logic."
           ]
         },
         {
           "slideIndex": 8,
           "slideTitle": "React Lifecycle",
-          "slideDescription": "Component lifecycle phases",
+          "slideDescription": "Lifecycle refers to different phases of a component from creation to removal.",
           "slidePoints": [
-            "Mounting (Component loads)",
-            "Updating (State or props change)",
-            "Unmounting (Component removed)",
-            "useEffect replaces lifecycle methods"
+            "Mounting – Component appears on screen.",
+            "Updating – When state or props change.",
+            "Unmounting – Component removed from DOM.",
+            "useEffect replaces lifecycle methods in functional components."
           ]
         },
         {
           "slideIndex": 9,
           "slideTitle": "React Router",
-          "slideDescription": "Handling navigation",
+          "slideDescription": "React Router helps manage navigation in single-page applications without reloading the page.",
           "slidePoints": [
-            "Enables single page application routing",
-            "Routes define path and component",
-            "useParams and useNavigate hooks",
-            "Avoids full page reload"
+            "SPA routing – Navigate without refreshing browser.",
+            "Routes define mapping – Path to component.",
+            "useParams & useNavigate – Access URL params and navigate programmatically.",
+            "Improves user experience."
           ]
         },
         {
           "slideIndex": 10,
           "slideTitle": "React 19 Overview",
-          "slideDescription": "Latest Major Release",
+          "slideDescription": "React 19 focuses on improving performance, async handling, and developer experience.",
           "slidePoints": [
-            "React 19 focuses on performance and developer experience",
-            "Introduces Server Actions",
-            "Improved Suspense handling",
-            "Better integration with modern frameworks"
+            "Performance improvements – Faster rendering.",
+            "Server Actions – Direct server communication.",
+            "Improved Suspense – Better async handling.",
+            "Modern framework integration – Works well with Next.js."
           ]
         },
         {
           "slideIndex": 11,
           "slideTitle": "Server Actions (React 19)",
-          "slideDescription": "Direct server interaction",
+          "slideDescription": "Server Actions allow components to directly call server-side logic without manual API endpoints.",
           "slidePoints": [
-            "Allows calling server functions directly from components",
-            "Reduces need for API boilerplate",
-            "Improves full-stack integration",
-            "Mainly used with frameworks like Next.js"
+            "Direct server function calls – No need for REST boilerplate.",
+            "Cleaner full-stack integration.",
+            "Reduces complexity.",
+            "Common in Next.js app router."
           ]
         },
         {
           "slideIndex": 12,
           "slideTitle": "Improved Suspense",
-          "slideDescription": "Better async handling",
+          "slideDescription": "Suspense in React 19 improves loading state management and streaming support.",
           "slidePoints": [
-            "Handles loading states more efficiently",
-            "Better streaming support",
-            "Improved concurrent rendering",
-            "Enhances user experience"
+            "Better loading UI handling.",
+            "Streaming server rendering.",
+            "Improved concurrent rendering.",
+            "Enhances performance in async UI."
           ]
         },
         {
           "slideIndex": 13,
           "slideTitle": "Automatic Batching",
-          "slideDescription": "Optimized state updates",
+          "slideDescription": "React automatically batches multiple state updates to improve performance.",
           "slidePoints": [
-            "Multiple state updates are batched automatically",
-            "Reduces unnecessary re-renders",
-            "Improves performance",
-            "Works across async boundaries"
+            "Multiple updates combined.",
+            "Fewer re-renders.",
+            "Works in async code.",
+            "Improves performance in complex apps."
           ]
         },
         {
           "slideIndex": 14,
           "slideTitle": "Concurrent Rendering",
-          "slideDescription": "Non-blocking UI rendering",
+          "slideDescription": "Concurrent rendering allows React to prepare UI in background without blocking user interaction.",
           "slidePoints": [
-            "Allows interruptible rendering",
-            "Keeps UI responsive",
-            "Background rendering support",
-            "Improves large application performance"
+            "Interruptible rendering.",
+            "Keeps UI responsive.",
+            "Handles heavy UI efficiently.",
+            "Better UX in large apps."
           ]
         },
         {
           "slideIndex": 15,
           "slideTitle": "React Learning Path",
-          "slideDescription": "Complete Roadmap",
+          "slideDescription": "A structured roadmap to master React from basics to advanced level.",
           "slidePoints": [
-            "Learn JavaScript ES6 first",
-            "Understand Components, Props, State",
-            "Master Hooks and Routing",
-            "Learn Redux or Zustand for state management",
-            "Build real-world projects"
+            "Master JavaScript ES6 – Arrow functions, promises, destructuring.",
+            "Learn components, props, state – Core fundamentals.",
+            "Master hooks and routing.",
+            "State management – Redux or Zustand.",
+            "Build real-world projects – Dashboard, E-commerce, Admin panel."
+          ]
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "React Interview – Mid Level (Scenario Based Questions)",
+      "slides": [
+        {
+          "slideIndex": 0,
+          "slideTitle": "How does React decide when to re-render a component?",
+          "slideDescription": "React re-renders a component when its state changes, its props change, or its parent re-renders. During re-render, React creates a new Virtual DOM tree and compares it with the previous one using the reconciliation algorithm. Even if nothing visually changes, the component function still executes. Optimization techniques like React.memo, useMemo, and useCallback can reduce unnecessary re-renders by preventing reference changes.",
+          "slidePoints": [
+            "State updates trigger re-render.",
+            "Parent re-render also re-renders children.",
+            "Props reference change causes re-render.",
+            "Reconciliation updates only changed DOM nodes."
+          ]
+        },
+        {
+          "slideIndex": 1,
+          "slideTitle": "What is the difference between useMemo and useCallback?",
+          "slideDescription": "useMemo memoizes a computed value, while useCallback memoizes a function reference. Both help prevent unnecessary recalculations or re-renders when dependencies do not change. useMemo is used for expensive calculations, and useCallback is mainly used to prevent child components from re-rendering due to new function references.",
+          "slidePoints": [
+            "useMemo returns a memoized value.",
+            "useCallback returns a memoized function.",
+            "Both depend on dependency array.",
+            "Often used with React.memo."
+          ]
+        },
+        {
+          "slideIndex": 2,
+          "slideTitle": "Explain how React.memo works internally.",
+          "slideDescription": "React.memo is a higher-order component that memoizes the rendered output of a functional component. It performs a shallow comparison of previous and new props. If props are the same (by reference), React skips re-rendering the component. It is useful for performance optimization but should not be overused without measurement.",
+          "slidePoints": [
+            "Performs shallow comparison of props.",
+            "Prevents re-render if props unchanged.",
+            "Works only for functional components.",
+            "Can accept custom comparison function."
+          ]
+        },
+        {
+          "slideIndex": 3,
+          "slideTitle": "How does useEffect work and when does it run?",
+          "slideDescription": "useEffect runs after the component renders. By default, it runs after every render. If a dependency array is provided, it runs only when those dependencies change. If the array is empty, it runs once after initial mount. It can also return a cleanup function which runs before unmounting or before next execution.",
+          "slidePoints": [
+            "Runs after render phase.",
+            "Dependency array controls execution.",
+            "Empty array = run once.",
+            "Cleanup function prevents memory leaks."
+          ]
+        },
+        {
+          "slideIndex": 4,
+          "slideTitle": "How would you prevent unnecessary API calls in React?",
+          "slideDescription": "Unnecessary API calls can be prevented by properly managing dependency arrays in useEffect, using debouncing techniques, memoizing request parameters, and caching responses using tools like React Query or Redux Toolkit Query. Avoid triggering effects from unstable references like inline objects or functions.",
+          "slidePoints": [
+            "Use correct dependency array.",
+            "Implement debouncing for search inputs.",
+            "Avoid inline object dependencies.",
+            "Use caching libraries."
+          ]
+        },
+        {
+          "slideIndex": 5,
+          "slideTitle": "What is Prop Drilling and how do you solve it?",
+          "slideDescription": "Prop drilling happens when data is passed through multiple intermediate components just to reach a deeply nested component. This increases coupling and reduces maintainability. It can be solved using Context API, state management libraries like Redux, or component composition patterns.",
+          "slidePoints": [
+            "Passing props through multiple layers.",
+            "Makes components tightly coupled.",
+            "Solved using Context API.",
+            "Redux for large applications."
+          ]
+        },
+        {
+          "slideIndex": 6,
+          "slideTitle": "Explain the difference between controlled and uncontrolled components.",
+          "slideDescription": "In controlled components, form input values are managed by React state. In uncontrolled components, input values are managed by the DOM using refs. Controlled components provide better validation and control, and are preferred in production applications.",
+          "slidePoints": [
+            "Controlled uses React state.",
+            "Uncontrolled uses ref and DOM.",
+            "Controlled gives validation control.",
+            "Uncontrolled simpler but less flexible."
+          ]
+        },
+        {
+          "slideIndex": 7,
+          "slideTitle": "How does React handle asynchronous state updates?",
+          "slideDescription": "React batches multiple state updates for performance optimization. State updates are asynchronous, meaning React schedules them and applies them during the next render cycle. To update based on previous state, functional updates should be used to avoid stale state issues.",
+          "slidePoints": [
+            "State updates are batched.",
+            "Updates are asynchronous.",
+            "Use functional updates when dependent on previous state.",
+            "Avoid relying on immediate state change."
+          ]
+        },
+        {
+          "slideIndex": 8,
+          "slideTitle": "Explain reconciliation and the diffing algorithm.",
+          "slideDescription": "Reconciliation is the process React uses to update the DOM efficiently. React creates a new Virtual DOM tree and compares it with the previous one using a diffing algorithm. It identifies minimal changes and updates only those parts in the real DOM.",
+          "slidePoints": [
+            "Virtual DOM comparison process.",
+            "Efficient DOM updates.",
+            "Uses key prop to track list items.",
+            "Improves performance significantly."
+          ]
+        },
+        {
+          "slideIndex": 9,
+          "slideTitle": "How would you structure a scalable React project?",
+          "slideDescription": "A scalable React project follows feature-based folder structure, separates UI and business logic, centralizes API calls, uses reusable components, and applies consistent state management. Proper separation improves maintainability and team collaboration.",
+          "slidePoints": [
+            "Feature-based folder structure.",
+            "Separate components, hooks, services.",
+            "Centralized API layer.",
+            "Reusable UI components."
+          ]
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "name": "SQL Interview - Level 1 (Basics)",
+      "slides": [
+        {
+          "slideIndex": 0,
+          "slideTitle": "Introduction to SQL",
+          "slideDescription": "Understanding database fundamentals",
+          "slidePoints": [
+            "What is SQL",
+            "What is RDBMS",
+            "Tables, Rows, Columns",
+            "Primary Key concept",
+            "Foreign Key concept",
+            "Difference between SQL and NoSQL"
+          ]
+        },
+        {
+          "slideIndex": 1,
+          "slideTitle": "Basic Queries",
+          "slideDescription": "Retrieving data from tables",
+          "slidePoints": [
+            "SELECT statement",
+            "WHERE clause",
+            "ORDER BY",
+            "DISTINCT keyword",
+            "LIMIT / TOP",
+            "Alias usage"
+          ]
+        },
+        {
+          "slideIndex": 2,
+          "slideTitle": "Filtering Data",
+          "slideDescription": "Using conditions effectively",
+          "slidePoints": [
+            "AND / OR operators",
+            "IN operator",
+            "BETWEEN",
+            "LIKE operator",
+            "IS NULL",
+            "Comparison operators"
+          ]
+        },
+        {
+          "slideIndex": 3,
+          "slideTitle": "Aggregate Functions",
+          "slideDescription": "Working with grouped data",
+          "slidePoints": [
+            "COUNT()",
+            "SUM()",
+            "AVG()",
+            "MIN()",
+            "MAX()",
+            "GROUP BY and HAVING"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "name": "SQL Interview - Level 2 (Intermediate)",
+      "slides": [
+        {
+          "slideIndex": 0,
+          "slideTitle": "Joins in SQL",
+          "slideDescription": "Combining multiple tables",
+          "slidePoints": [
+            "INNER JOIN",
+            "LEFT JOIN",
+            "RIGHT JOIN",
+            "FULL OUTER JOIN",
+            "Self Join",
+            "Cross Join"
+          ]
+        },
+        {
+          "slideIndex": 1,
+          "slideTitle": "Subqueries",
+          "slideDescription": "Nested query concepts",
+          "slidePoints": [
+            "Single-row subquery",
+            "Multi-row subquery",
+            "Correlated subquery",
+            "Subquery in SELECT",
+            "Subquery in WHERE",
+            "Performance considerations"
+          ]
+        },
+        {
+          "slideIndex": 2,
+          "slideTitle": "Indexes",
+          "slideDescription": "Improving query performance",
+          "slidePoints": [
+            "What is an index",
+            "Clustered vs Non-clustered index",
+            "When to create index",
+            "Index drawbacks",
+            "Composite index",
+            "Unique index"
+          ]
+        },
+        {
+          "slideIndex": 3,
+          "slideTitle": "Constraints",
+          "slideDescription": "Maintaining data integrity",
+          "slidePoints": [
+            "Primary Key",
+            "Foreign Key",
+            "Unique",
+            "Not Null",
+            "Check",
+            "Default"
+          ]
+        },
+        {
+          "slideIndex": 4,
+          "slideTitle": "Views and Stored Procedures",
+          "slideDescription": "Reusable SQL components",
+          "slidePoints": [
+            "What is a view",
+            "Simple vs complex view",
+            "Stored procedures",
+            "Advantages of stored procedures",
+            "Parameterized procedures",
+            "Use cases in enterprise apps"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "name": "SQL Interview - Level 3 (Advanced)",
+      "slides": [
+        {
+          "slideIndex": 0,
+          "slideTitle": "Advanced Querying",
+          "slideDescription": "Complex data analysis queries",
+          "slidePoints": [
+            "Window functions",
+            "ROW_NUMBER()",
+            "RANK() and DENSE_RANK()",
+            "PARTITION BY",
+            "CTE (Common Table Expressions)",
+            "Recursive CTE"
+          ]
+        },
+        {
+          "slideIndex": 1,
+          "slideTitle": "Transactions",
+          "slideDescription": "Managing data consistency",
+          "slidePoints": [
+            "What is a transaction",
+            "ACID properties",
+            "COMMIT and ROLLBACK",
+            "Isolation levels",
+            "Deadlock concept",
+            "Handling concurrency"
+          ]
+        },
+        {
+          "slideIndex": 2,
+          "slideTitle": "Normalization & Database Design",
+          "slideDescription": "Designing scalable databases",
+          "slidePoints": [
+            "1NF, 2NF, 3NF",
+            "Denormalization",
+            "Star schema",
+            "Fact and dimension tables",
+            "Avoiding redundancy",
+            "Trade-offs in normalization"
+          ]
+        },
+        {
+          "slideIndex": 3,
+          "slideTitle": "Query Optimization",
+          "slideDescription": "Improving performance at scale",
+          "slidePoints": [
+            "Explain plan",
+            "Index usage analysis",
+            "Avoiding full table scan",
+            "Optimizing joins",
+            "Partitioning",
+            "Sharding basics"
+          ]
+        },
+        {
+          "slideIndex": 4,
+          "slideTitle": "Real Interview Scenarios",
+          "slideDescription": "Common advanced SQL questions",
+          "slidePoints": [
+            "Find second highest salary",
+            "Find duplicate records",
+            "Running total calculation",
+            "Nth highest salary",
+            "Delete duplicate rows safely",
+            "Top 3 records per group"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "name": "Python Interview Level-1",
+      "slides": [
+        {
+          "slideIndex": 0,
+          "slideTitle": "What is Python? Why is it popular?",
+          "slideDescription": "Python is a high-level, interpreted, and easy-to-read programming language. It is popular because of its simple syntax, large community support, and wide usage in web development, automation, data science, AI, and scripting.",
+          "slidePoints": [
+            "Interpreted language (no need for compilation step like Java).",
+            "Readable and beginner-friendly syntax.",
+            "Large ecosystem of libraries and frameworks."
+          ]
+        },
+        {
+          "slideIndex": 1,
+          "slideTitle": "What are the main data types in Python?",
+          "slideDescription": "Python provides built-in data types such as numeric types (int, float), sequence types (list, tuple, string), mapping type (dict), and set type (set) to store and manage different kinds of data.",
+          "slidePoints": [
+            "Numeric: int, float, complex.",
+            "Sequence: list, tuple, string.",
+            "Mapping & Set: dict, set."
+          ]
+        },
+        {
+          "slideIndex": 2,
+          "slideTitle": "What is the difference between List and Tuple?",
+          "slideDescription": "The main difference is that lists are mutable (can be changed) while tuples are immutable (cannot be changed after creation). Lists use square brackets and tuples use parentheses.",
+          "slidePoints": [
+            "List is mutable; tuple is immutable.",
+            "List uses [], tuple uses ().",
+            "Tuple is slightly faster and can be used as dictionary key."
+          ]
+        },
+        {
+          "slideIndex": 3,
+          "slideTitle": "What is the difference between == and is?",
+          "slideDescription": "The == operator compares the values of two objects, while the 'is' operator compares their memory locations (object identity).",
+          "slidePoints": [
+            "== checks value equality.",
+            "is checks object identity (same memory reference).",
+            "'is' is commonly used for None comparison."
+          ]
+        },
+        {
+          "slideIndex": 4,
+          "slideTitle": "What is a Dictionary in Python?",
+          "slideDescription": "A dictionary is a key-value data structure that stores data in pairs. Keys must be unique and immutable, and values can be of any data type.",
+          "slidePoints": [
+            "Stores data as key-value pairs.",
+            "Keys must be immutable (string, number, tuple).",
+            "Provides fast lookup using hashing."
+          ]
+        },
+        {
+          "slideIndex": 5,
+          "slideTitle": "What are functions in Python?",
+          "slideDescription": "Functions are reusable blocks of code defined using the 'def' keyword. They help organize code, avoid repetition, and can accept parameters and return values.",
+          "slidePoints": [
+            "Defined using 'def' keyword.",
+            "Can return single or multiple values.",
+            "Support default and keyword arguments."
+          ]
+        },
+        {
+          "slideIndex": 6,
+          "slideTitle": "What are *args and **kwargs?",
+          "slideDescription": "*args allows a function to accept a variable number of positional arguments, and **kwargs allows it to accept a variable number of keyword arguments.",
+          "slidePoints": [
+            "*args collects extra positional arguments as tuple.",
+            "**kwargs collects extra keyword arguments as dictionary.",
+            "Useful when number of inputs is not fixed."
+          ]
+        },
+        {
+          "slideIndex": 7,
+          "slideTitle": "What is List Comprehension?",
+          "slideDescription": "List comprehension is a concise way to create lists using a single line of code, often replacing traditional loops for better readability and performance.",
+          "slidePoints": [
+            "Compact way to create lists.",
+            "Improves readability.",
+            "Can include conditional logic."
+          ]
+        },
+        {
+          "slideIndex": 8,
+          "slideTitle": "What is the difference between for loop and while loop?",
+          "slideDescription": "A for loop is generally used when the number of iterations is known, while a while loop runs until a condition becomes false.",
+          "slidePoints": [
+            "for loop is iteration-based.",
+            "while loop is condition-based.",
+            "while may cause infinite loop if condition not updated."
+          ]
+        },
+        {
+          "slideIndex": 9,
+          "slideTitle": "What is Exception Handling in Python?",
+          "slideDescription": "Exception handling is a mechanism to handle runtime errors using try, except, else, and finally blocks so that the program does not crash unexpectedly.",
+          "slidePoints": [
+            "Uses try, except, else, finally blocks.",
+            "Handles runtime errors safely.",
+            "Custom exceptions can be defined."
+          ]
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "name": "Python Interview Level-2 (OOPS)",
+      "slides": [
+        {
+          "slideIndex": 0,
+          "slideTitle": "What is Object-Oriented Programming (OOP)?",
+          "slideDescription": "Object-Oriented Programming is a programming paradigm based on objects and classes. It helps organize code using real-world concepts like encapsulation, inheritance, polymorphism, and abstraction.",
+          "slidePoints": [
+            "Code is organized using classes and objects.",
+            "Improves reusability and maintainability.",
+            "Based on four pillars: Encapsulation, Inheritance, Polymorphism, Abstraction."
+          ]
+        },
+        {
+          "slideIndex": 1,
+          "slideTitle": "What is a Class and an Object?",
+          "slideDescription": "A class is a blueprint for creating objects, and an object is an instance of a class containing data and behavior.",
+          "slidePoints": [
+            "Class defines attributes and methods.",
+            "Object is a real instance created from class.",
+            "Multiple objects can be created from one class."
+          ]
+        },
+        {
+          "slideIndex": 2,
+          "slideTitle": "What is Encapsulation?",
+          "slideDescription": "Encapsulation is the concept of hiding internal data and exposing only necessary parts of the object using methods.",
+          "slidePoints": [
+            "Data hiding using private variables (_ or __).",
+            "Access controlled via methods.",
+            "Improves security and modularity."
+          ]
+        },
+        {
+          "slideIndex": 3,
+          "slideTitle": "What is Inheritance?",
+          "slideDescription": "Inheritance allows one class (child) to acquire properties and methods of another class (parent), promoting code reuse.",
+          "slidePoints": [
+            "Child class reuses parent class code.",
+            "Supports single and multiple inheritance in Python.",
+            "Helps in hierarchical classification."
+          ]
+        },
+        {
+          "slideIndex": 4,
+          "slideTitle": "What is Polymorphism?",
+          "slideDescription": "Polymorphism allows the same method name to behave differently based on the object or context.",
+          "slidePoints": [
+            "Method overriding in child class.",
+            "Operator overloading supported.",
+            "Enables flexibility in code design."
+          ]
+        },
+        {
+          "slideIndex": 5,
+          "slideTitle": "What is Abstraction?",
+          "slideDescription": "Abstraction means hiding implementation details and showing only essential features, typically achieved using abstract classes or interfaces.",
+          "slidePoints": [
+            "Implemented using abc module.",
+            "Abstract methods must be implemented by child class.",
+            "Reduces complexity by hiding internal logic."
+          ]
+        },
+        {
+          "slideIndex": 6,
+          "slideTitle": "What is the difference between @staticmethod and @classmethod?",
+          "slideDescription": "@staticmethod does not access class or instance variables, while @classmethod takes cls as first parameter and can access class-level data.",
+          "slidePoints": [
+            "Instance method takes self.",
+            "@classmethod takes cls.",
+            "@staticmethod takes no default reference parameter."
+          ]
+        },
+        {
+          "slideIndex": 7,
+          "slideTitle": "What is Method Overriding?",
+          "slideDescription": "Method overriding occurs when a child class provides a specific implementation of a method already defined in its parent class.",
+          "slidePoints": [
+            "Same method name in parent and child.",
+            "Runtime polymorphism example.",
+            "Parent method can be accessed using super()."
+          ]
+        },
+        {
+          "slideIndex": 8,
+          "slideTitle": "What is Constructor in Python?",
+          "slideDescription": "A constructor is a special method named __init__ that is automatically called when an object is created to initialize its attributes.",
+          "slidePoints": [
+            "Defined using __init__ method.",
+            "Runs automatically on object creation.",
+            "Used to initialize object variables."
+          ]
+        },
+        {
+          "slideIndex": 9,
+          "slideTitle": "What is Multiple Inheritance in Python?",
+          "slideDescription": "Multiple inheritance allows a class to inherit from more than one parent class, and Python resolves method calls using Method Resolution Order (MRO).",
+          "slidePoints": [
+            "Child class can inherit from multiple parents.",
+            "Python uses MRO to resolve conflicts.",
+            "MRO follows C3 linearization algorithm."
+          ]
+        },
+        [
+          {
+            "slideIndex": 10,
+            "slideTitle": "What is Method Resolution Order (MRO) in Python?",
+            "slideDescription": "Method Resolution Order (MRO) defines the order in which Python searches for a method in a hierarchy of classes, especially in multiple inheritance scenarios. It ensures a consistent and predictable method lookup.",
+            "slidePoints": [
+              "Defines order of method lookup in inheritance chain.",
+              "Uses C3 linearization algorithm.",
+              "Can be checked using ClassName.__mro__ or ClassName.mro()."
+            ]
+          },
+          {
+            "slideIndex": 11,
+            "slideTitle": "What are Magic (Dunder) Methods in Python?",
+            "slideDescription": "Magic methods, also called dunder methods (double underscore), are special methods that start and end with double underscores and allow developers to define custom behavior for built-in operations.",
+            "slidePoints": [
+              "__init__, __str__, __repr__ are common examples.",
+              "Used for operator overloading like __add__, __len__.",
+              "Enable objects to behave like built-in types."
+            ]
+          },
+          {
+            "slideIndex": 12,
+            "slideTitle": "What is the difference between __str__ and __repr__?",
+            "slideDescription": "__str__ returns a user-friendly string representation of an object, while __repr__ returns an official string representation mainly used for debugging and development.",
+            "slidePoints": [
+              "__str__ is for end users (readable output).",
+              "__repr__ is for developers (detailed output).",
+              "If __str__ is not defined, Python uses __repr__."
+            ]
+          },
+          {
+            "slideIndex": 13,
+            "slideTitle": "What is a Metaclass in Python?",
+            "slideDescription": "A metaclass is a class of a class that defines how a class behaves. It controls the creation of classes themselves.",
+            "slidePoints": [
+              "Classes are objects in Python.",
+              "type is the default metaclass.",
+              "Used to modify or enforce class-level behavior."
+            ]
+          },
+          {
+            "slideIndex": 14,
+            "slideTitle": "What is the difference between Composition and Inheritance?",
+            "slideDescription": "Inheritance represents an 'is-a' relationship where a class derives from another class, while composition represents a 'has-a' relationship where a class contains another class as a member.",
+            "slidePoints": [
+              "Inheritance promotes code reuse via parent-child relationship.",
+              "Composition builds complex objects using other objects.",
+              "Composition is generally preferred for flexibility and loose coupling."
+            ]
+          }
+        ]
+      ]
+    },
+    {
+      "id": 12,
+      "name": "Python Interview Level-3 (Modules & Packages)",
+      "slides": [
+        {
+          "slideIndex": 0,
+          "slideTitle": "What is a Module in Python?",
+          "slideDescription": "A module is a single Python file (.py) that contains functions, classes, or variables which can be reused in other Python programs using the import statement.",
+          "slidePoints": [
+            "Each .py file is treated as a module.",
+            "Helps in code reusability and organization.",
+            "Can be imported using import or from ... import."
+          ]
+        },
+        {
+          "slideIndex": 1,
+          "slideTitle": "What is a Package in Python?",
+          "slideDescription": "A package is a collection of multiple related modules organized in directories. It allows structuring large Python projects into hierarchical folder structures.",
+          "slidePoints": [
+            "A directory containing multiple modules.",
+            "Traditionally contains __init__.py file.",
+            "Supports hierarchical module structure."
+          ]
+        },
+        {
+          "slideIndex": 2,
+          "slideTitle": "What is the difference between a Module and a Package?",
+          "slideDescription": "A module is a single Python file, whereas a package is a directory that contains multiple modules and possibly sub-packages.",
+          "slidePoints": [
+            "Module = single .py file.",
+            "Package = folder containing modules.",
+            "Packages help manage large-scale applications."
+          ]
+        },
+        {
+          "slideIndex": 3,
+          "slideTitle": "What are Built-in Modules and User-defined Modules?",
+          "slideDescription": "Built-in modules are pre-installed with Python such as math or sys, while user-defined modules are custom Python files created by developers.",
+          "slidePoints": [
+            "Built-in modules come with Python installation.",
+            "User-defined modules are project-specific.",
+            "Both are imported using the import keyword."
+          ]
+        },
+        {
+          "slideIndex": 4,
+          "slideTitle": "What is the role of __init__.py in a package?",
+          "slideDescription": "__init__.py is a special file inside a package directory that initializes the package and can execute package-level initialization code.",
+          "slidePoints": [
+            "Marks a directory as a Python package (in older versions mandatory).",
+            "Can contain initialization logic.",
+            "Controls what is exposed when package is imported."
+          ]
+        },
+        {
+          "slideIndex": 5,
+          "slideTitle": "What is the difference between absolute import and relative import?",
+          "slideDescription": "Absolute import specifies the full path from the project’s root package, while relative import uses dot notation to import modules relative to the current module’s location.",
+          "slidePoints": [
+            "Absolute import improves clarity and readability.",
+            "Relative import uses . or .. notation.",
+            "Relative imports are mainly used within packages."
+          ]
+        },
+        {
+          "slideIndex": 6,
+          "slideTitle": "How does Python search for modules?",
+          "slideDescription": "When importing a module, Python searches in the current directory, then in the PYTHONPATH, and finally in the standard library directories listed in sys.path.",
+          "slidePoints": [
+            "Search order is defined in sys.path.",
+            "Current directory is checked first.",
+            "Environment variables can modify search path."
+          ]
+        },
+        {
+          "slideIndex": 7,
+          "slideTitle": "What is __name__ == '__main__' in Python?",
+          "slideDescription": "The condition __name__ == '__main__' ensures that certain code runs only when the file is executed directly, and not when it is imported as a module.",
+          "slidePoints": [
+            "__name__ is a special built-in variable.",
+            "Helps separate reusable logic from execution code.",
+            "Improves modular and testable design."
+          ]
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "name": "Python Interview Level-4 (NumPy, Pandas & Common Libraries)",
+      "slides": [
+        {
+          "slideIndex": 0,
+          "slideTitle": "What is NumPy and why is it used?",
+          "slideDescription": "NumPy is a fundamental Python library used for numerical computing. It provides support for large multi-dimensional arrays and matrices along with high-performance mathematical functions to operate on them.",
+          "slidePoints": [
+            "Core object is ndarray (N-dimensional array).",
+            "Faster than Python lists due to C-level implementation.",
+            "Supports vectorized operations and broadcasting."
+          ]
+        },
+        {
+          "slideIndex": 1,
+          "slideTitle": "What is the difference between a Python list and a NumPy array?",
+          "slideDescription": "Python lists can store mixed data types and are flexible, whereas NumPy arrays store homogeneous data and provide faster mathematical computations and memory efficiency.",
+          "slidePoints": [
+            "List can store mixed data types; NumPy array cannot.",
+            "NumPy arrays are more memory efficient.",
+            "NumPy supports element-wise operations."
+          ]
+        },
+        {
+          "slideIndex": 2,
+          "slideTitle": "What is Pandas and where is it used?",
+          "slideDescription": "Pandas is a powerful data manipulation and analysis library built on top of NumPy. It is mainly used for handling structured data like CSV files, Excel sheets, and databases.",
+          "slidePoints": [
+            "Provides Series and DataFrame data structures.",
+            "Used in data cleaning and transformation.",
+            "Supports reading/writing CSV, Excel, SQL, etc."
+          ]
+        },
+        {
+          "slideIndex": 3,
+          "slideTitle": "What is the difference between Series and DataFrame in Pandas?",
+          "slideDescription": "A Series is a one-dimensional labeled array, while a DataFrame is a two-dimensional labeled data structure with rows and columns.",
+          "slidePoints": [
+            "Series is like a single column.",
+            "DataFrame is like a table (rows and columns).",
+            "Both support labeled indexing."
+          ]
+        },
+        {
+          "slideIndex": 4,
+          "slideTitle": "How do you handle missing values in Pandas?",
+          "slideDescription": "Missing values in Pandas can be handled using functions like dropna() to remove them or fillna() to replace them with a specific value.",
+          "slidePoints": [
+            "dropna() removes missing data.",
+            "fillna() replaces missing values.",
+            "isnull() or notnull() checks missing data."
+          ]
+        },
+        {
+          "slideIndex": 5,
+          "slideTitle": "What is GroupBy in Pandas?",
+          "slideDescription": "GroupBy is used to split data into groups based on some criteria, apply aggregation functions, and combine the results.",
+          "slidePoints": [
+            "Used for aggregation like sum, mean, count.",
+            "Follows split-apply-combine strategy.",
+            "Common in reporting and analytics tasks."
+          ]
+        },
+        {
+          "slideIndex": 6,
+          "slideTitle": "What is Broadcasting in NumPy?",
+          "slideDescription": "Broadcasting is a technique in NumPy that allows operations on arrays of different shapes by automatically expanding smaller arrays to match larger ones.",
+          "slidePoints": [
+            "Avoids writing explicit loops.",
+            "Works when array shapes are compatible.",
+            "Improves performance and readability."
+          ]
+        },
+        {
+          "slideIndex": 7,
+          "slideTitle": "What is Matplotlib and why is it used?",
+          "slideDescription": "Matplotlib is a data visualization library in Python used to create static, animated, and interactive plots such as line charts, bar charts, and histograms.",
+          "slidePoints": [
+            "Used for plotting graphs.",
+            "Works well with NumPy and Pandas.",
+            "Common plots: line, bar, scatter, histogram."
+          ]
+        },
+        {
+          "slideIndex": 8,
+          "slideTitle": "What is the difference between loc and iloc in Pandas?",
+          "slideDescription": "loc is label-based indexing, meaning it selects data using row/column labels, while iloc is position-based indexing, meaning it selects data using integer positions.",
+          "slidePoints": [
+            "loc uses labels (index names).",
+            "iloc uses integer positions.",
+            "Both are used for data selection."
+          ]
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "name": "Python Interview Level-5 (Production & Enterprise Level)",
+      "slides": [
+        {
+          "slideIndex": 0,
+          "slideTitle": "What is virtual environment and why is it important?",
+          "slideDescription": "A virtual environment is an isolated Python environment that allows projects to have their own dependencies and Python versions without conflicting with other projects.",
+          "slidePoints": [
+            "Prevents dependency conflicts.",
+            "Common tools: venv, virtualenv.",
+            "Essential for production-grade applications."
+          ]
+        },
+        {
+          "slideIndex": 1,
+          "slideTitle": "How do you manage dependencies in production?",
+          "slideDescription": "Dependencies are managed using requirement files or dependency management tools to ensure consistent and reproducible builds across environments.",
+          "slidePoints": [
+            "Use requirements.txt or pyproject.toml.",
+            "Pin versions to avoid breaking changes.",
+            "Use tools like pip-tools or poetry."
+          ]
+        },
+        {
+          "slideIndex": 2,
+          "slideTitle": "What is logging and why not use print in production?",
+          "slideDescription": "Logging is a structured way to record application events, errors, and debugging information. Unlike print, logging supports levels, formatting, and external log storage.",
+          "slidePoints": [
+            "Supports levels: DEBUG, INFO, WARNING, ERROR.",
+            "Can write logs to files or external systems.",
+            "Helps in debugging production issues."
+          ]
+        },
+        {
+          "slideIndex": 3,
+          "slideTitle": "How do you handle exceptions in enterprise applications?",
+          "slideDescription": "Exceptions should be handled gracefully using structured error handling, custom exceptions, and centralized logging to avoid application crashes.",
+          "slidePoints": [
+            "Use try-except blocks properly.",
+            "Create custom exceptions when needed.",
+            "Avoid catching generic Exception blindly."
+          ]
+        },
+        {
+          "slideIndex": 4,
+          "slideTitle": "What is the difference between multithreading and multiprocessing?",
+          "slideDescription": "Multithreading runs multiple threads within the same process and shares memory, while multiprocessing runs separate processes with independent memory spaces.",
+          "slidePoints": [
+            "Threading affected by GIL in CPython.",
+            "Multiprocessing bypasses GIL.",
+            "Use multiprocessing for CPU-bound tasks."
+          ]
+        },
+        {
+          "slideIndex": 5,
+          "slideTitle": "What is GIL in Python?",
+          "slideDescription": "The Global Interpreter Lock (GIL) is a mechanism in CPython that allows only one thread to execute Python bytecode at a time, limiting true parallelism in CPU-bound tasks.",
+          "slidePoints": [
+            "Exists in CPython implementation.",
+            "Affects CPU-bound multithreading.",
+            "Not a major issue for I/O-bound tasks."
+          ]
+        },
+        {
+          "slideIndex": 6,
+          "slideTitle": "What is asynchronous programming in Python?",
+          "slideDescription": "Asynchronous programming allows tasks to run concurrently using event loops, mainly for I/O-bound operations, improving performance and scalability.",
+          "slidePoints": [
+            "Uses async and await keywords.",
+            "Common library: asyncio.",
+            "Best for I/O-bound operations like APIs or DB calls."
+          ]
+        },
+        {
+          "slideIndex": 7,
+          "slideTitle": "How do you build REST APIs in Python for production?",
+          "slideDescription": "Production-grade REST APIs are built using frameworks like FastAPI or Django REST Framework with proper validation, authentication, logging, and documentation.",
+          "slidePoints": [
+            "Use frameworks like FastAPI or Django.",
+            "Implement input validation and authentication.",
+            "Add Swagger/OpenAPI documentation."
+          ]
+        },
+        {
+          "slideIndex": 8,
+          "slideTitle": "How do you secure a Python application?",
+          "slideDescription": "Security in enterprise applications involves proper authentication, authorization, input validation, encryption, and secure configuration management.",
+          "slidePoints": [
+            "Use JWT or OAuth2 for authentication.",
+            "Validate user inputs to prevent injection attacks.",
+            "Store secrets in environment variables."
+          ]
+        },
+        {
+          "slideIndex": 9,
+          "slideTitle": "What is ORM and why is it used?",
+          "slideDescription": "ORM (Object Relational Mapping) is used to interact with databases using Python objects instead of raw SQL, improving maintainability and abstraction.",
+          "slidePoints": [
+            "Examples: SQLAlchemy, Django ORM.",
+            "Maps classes to database tables.",
+            "Reduces direct SQL usage."
+          ]
+        },
+        {
+          "slideIndex": 10,
+          "slideTitle": "How do you write unit tests in Python?",
+          "slideDescription": "Unit tests are written using frameworks like unittest or pytest to validate individual components of the application and ensure code reliability.",
+          "slidePoints": [
+            "Use pytest or unittest framework.",
+            "Mock external dependencies.",
+            "Aim for good test coverage."
+          ]
+        },
+        {
+          "slideIndex": 11,
+          "slideTitle": "What is Docker and why is it used with Python apps?",
+          "slideDescription": "Docker is a containerization tool that packages Python applications along with dependencies to ensure consistent deployment across environments.",
+          "slidePoints": [
+            "Creates lightweight containers.",
+            "Ensures environment consistency.",
+            "Common in microservices architecture."
+          ]
+        },
+        {
+          "slideIndex": 12,
+          "slideTitle": "What is CI/CD in Python projects?",
+          "slideDescription": "CI/CD (Continuous Integration and Continuous Deployment) automates testing, building, and deployment of Python applications to ensure faster and reliable releases.",
+          "slidePoints": [
+            "Automates testing pipeline.",
+            "Reduces manual deployment errors.",
+            "Common tools: GitHub Actions, Jenkins."
+          ]
+        },
+        {
+          "slideIndex": 13,
+          "slideTitle": "How do you optimize performance in Python applications?",
+          "slideDescription": "Performance optimization involves profiling code, reducing bottlenecks, using efficient data structures, caching, and leveraging asynchronous or parallel processing.",
+          "slidePoints": [
+            "Use profiling tools like cProfile.",
+            "Avoid unnecessary loops and redundant computations.",
+            "Implement caching strategies."
+          ]
+        },
+        {
+          "slideIndex": 14,
+          "slideTitle": "What is scalability in Python systems?",
+          "slideDescription": "Scalability refers to the ability of a Python application to handle increased load by optimizing architecture, using load balancers, caching, and distributed systems.",
+          "slidePoints": [
+            "Horizontal scaling using containers.",
+            "Use caching systems like Redis.",
+            "Design stateless services."
+          ]
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "name": "Python with Databases & Messaging (MongoDB, PostgreSQL, Redis, RabbitMQ)",
+      "slides": [
+        {
+          "slideIndex": 0,
+          "slideTitle": "How does Python connect to PostgreSQL in production?",
+          "slideDescription": "Python connects to PostgreSQL using drivers like psycopg2 or asyncpg, or through ORMs like SQLAlchemy. In production, connections are managed using connection pooling for performance and reliability.",
+          "slidePoints": [
+            "Common drivers: psycopg2, asyncpg.",
+            "Use SQLAlchemy ORM for abstraction.",
+            "Enable connection pooling for scalability."
+          ]
+        },
+        {
+          "slideIndex": 1,
+          "slideTitle": "What is connection pooling and why is it important?",
+          "slideDescription": "Connection pooling maintains a pool of reusable database connections instead of creating a new one for every request, improving performance and reducing database load.",
+          "slidePoints": [
+            "Reduces overhead of frequent DB connections.",
+            "Improves performance under high traffic.",
+            "Supported by SQLAlchemy and most frameworks."
+          ]
+        },
+        {
+          "slideIndex": 2,
+          "slideTitle": "How do you manage database migrations in PostgreSQL?",
+          "slideDescription": "Database migrations are handled using tools like Alembic or Django migrations to version-control schema changes and safely apply updates across environments.",
+          "slidePoints": [
+            "Use Alembic with SQLAlchemy.",
+            "Track schema changes with versioning.",
+            "Avoid manual schema updates in production."
+          ]
+        },
+        {
+          "slideIndex": 3,
+          "slideTitle": "How does Python interact with MongoDB?",
+          "slideDescription": "Python interacts with MongoDB using the PyMongo driver or ODMs like MongoEngine. It allows working with documents in JSON-like format.",
+          "slidePoints": [
+            "Use PyMongo for direct queries.",
+            "MongoEngine provides ORM-like abstraction.",
+            "Works well for schema-less data."
+          ]
+        },
+        {
+          "slideIndex": 4,
+          "slideTitle": "When should you choose MongoDB over PostgreSQL?",
+          "slideDescription": "MongoDB is suitable for flexible, schema-less, document-based data, while PostgreSQL is better for structured relational data with strong ACID compliance and complex queries.",
+          "slidePoints": [
+            "MongoDB for dynamic schema and JSON data.",
+            "PostgreSQL for relational data and joins.",
+            "Choose based on data consistency requirements."
+          ]
+        },
+        {
+          "slideIndex": 5,
+          "slideTitle": "How is Redis used with Python?",
+          "slideDescription": "Redis is used as an in-memory data store for caching, session management, rate limiting, and pub/sub messaging in Python applications.",
+          "slidePoints": [
+            "Used for caching frequently accessed data.",
+            "Improves response time significantly.",
+            "Python client: redis-py."
+          ]
+        },
+        {
+          "slideIndex": 6,
+          "slideTitle": "What is caching strategy in enterprise Python apps?",
+          "slideDescription": "Caching strategy involves storing frequently accessed data in Redis or memory to reduce database load and improve performance.",
+          "slidePoints": [
+            "Cache-aside (lazy loading) pattern.",
+            "Set TTL (Time To Live) for cache entries.",
+            "Handle cache invalidation carefully."
+          ]
+        },
+        {
+          "slideIndex": 7,
+          "slideTitle": "How does Python integrate with RabbitMQ?",
+          "slideDescription": "Python integrates with RabbitMQ using libraries like pika or Celery to implement asynchronous messaging and background task processing.",
+          "slidePoints": [
+            "Use pika for direct RabbitMQ integration.",
+            "Celery simplifies distributed task queues.",
+            "Supports producer-consumer pattern."
+          ]
+        },
+        {
+          "slideIndex": 8,
+          "slideTitle": "What is the Producer-Consumer pattern?",
+          "slideDescription": "The Producer-Consumer pattern is a messaging design pattern where producers send messages to a queue and consumers process them asynchronously.",
+          "slidePoints": [
+            "Improves decoupling between services.",
+            "Enables background task processing.",
+            "Enhances scalability and reliability."
+          ]
+        },
+        {
+          "slideIndex": 9,
+          "slideTitle": "How do you manage environment variables in Python projects?",
+          "slideDescription": "Environment variables are used to store sensitive configurations like database URLs and secrets. They are managed using .env files or system environment settings.",
+          "slidePoints": [
+            "Use python-dotenv for local development.",
+            "Never hardcode secrets in code.",
+            "Use environment-based configs (dev, test, prod)."
+          ]
+        },
+        {
+          "slideIndex": 10,
+          "slideTitle": "How do you design a scalable architecture using PostgreSQL, Redis, and RabbitMQ?",
+          "slideDescription": "A scalable architecture typically uses PostgreSQL as the primary relational database, Redis for caching and fast data access, and RabbitMQ for asynchronous task processing and service communication.",
+          "slidePoints": [
+            "PostgreSQL for persistent structured data.",
+            "Redis for caching and session storage.",
+            "RabbitMQ for async processing and microservices communication."
+          ]
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "name": "Django Interview (Production & Enterprise Level)",
+      "slides": [
+        {
+          "slideIndex": 0,
+          "slideTitle": "What is Django and why is it used in enterprise applications?",
+          "slideDescription": "Django is a high-level Python web framework that follows the MVT (Model-View-Template) architecture and promotes rapid development, security, and scalability for enterprise-grade applications.",
+          "slidePoints": [
+            "Built-in ORM and admin panel.",
+            "Follows DRY (Don't Repeat Yourself) principle.",
+            "Highly secure and scalable."
+          ]
+        },
+        {
+          "slideIndex": 1,
+          "slideTitle": "Explain Django MVT Architecture.",
+          "slideDescription": "Django follows the Model-View-Template pattern where the Model handles data, the View processes business logic, and the Template manages presentation/UI.",
+          "slidePoints": [
+            "Model interacts with database.",
+            "View contains business logic.",
+            "Template renders HTML response."
+          ]
+        },
+        {
+          "slideIndex": 2,
+          "slideTitle": "How does Django ORM work?",
+          "slideDescription": "Django ORM allows developers to interact with the database using Python classes instead of writing raw SQL queries.",
+          "slidePoints": [
+            "Models map to database tables.",
+            "QuerySets are used for querying.",
+            "Supports migrations for schema changes."
+          ]
+        },
+        {
+          "slideIndex": 3,
+          "slideTitle": "What are Django Migrations?",
+          "slideDescription": "Migrations are Django’s way of propagating model changes into the database schema in a version-controlled and manageable way.",
+          "slidePoints": [
+            "makemigrations creates migration files.",
+            "migrate applies changes to database.",
+            "Tracks schema history."
+          ]
+        },
+        {
+          "slideIndex": 4,
+          "slideTitle": "How do you handle authentication and authorization in Django?",
+          "slideDescription": "Django provides built-in authentication and authorization systems including user models, permissions, and groups to secure applications.",
+          "slidePoints": [
+            "Built-in User model.",
+            "Supports permissions and groups.",
+            "JWT/OAuth can be integrated for APIs."
+          ]
+        },
+        {
+          "slideIndex": 5,
+          "slideTitle": "What is Django REST Framework (DRF)?",
+          "slideDescription": "Django REST Framework is an extension of Django used to build RESTful APIs with features like serialization, authentication, and browsable API interface.",
+          "slidePoints": [
+            "Serializers convert model data to JSON.",
+            "ViewSets simplify CRUD APIs.",
+            "Supports token and JWT authentication."
+          ]
+        },
+        {
+          "slideIndex": 6,
+          "slideTitle": "How do you optimize database queries in Django?",
+          "slideDescription": "Database queries in Django can be optimized using select_related, prefetch_related, indexing, and query profiling to reduce N+1 query problems.",
+          "slidePoints": [
+            "Use select_related for foreign keys.",
+            "Use prefetch_related for many-to-many.",
+            "Add database indexes where needed."
+          ]
+        },
+        {
+          "slideIndex": 7,
+          "slideTitle": "How do you handle static and media files in Django production?",
+          "slideDescription": "Static files (CSS, JS) and media files (user uploads) are handled using collectstatic and served via web servers like Nginx or cloud storage services in production.",
+          "slidePoints": [
+            "Use collectstatic command.",
+            "Configure STATIC_ROOT and MEDIA_ROOT.",
+            "Use CDN or cloud storage in production."
+          ]
+        },
+        {
+          "slideIndex": 8,
+          "slideTitle": "How do you secure a Django application?",
+          "slideDescription": "Django provides built-in protection against common attacks like CSRF, XSS, and SQL injection, and supports secure configuration practices.",
+          "slidePoints": [
+            "Enable CSRF protection.",
+            "Use Django ORM to prevent SQL injection.",
+            "Set DEBUG=False in production."
+          ]
+        },
+        {
+          "slideIndex": 9,
+          "slideTitle": "How do you deploy a Django application in production?",
+          "slideDescription": "Django applications are deployed using WSGI/ASGI servers like Gunicorn or Uvicorn behind Nginx, often containerized with Docker and automated via CI/CD pipelines.",
+          "slidePoints": [
+            "Use Gunicorn or Uvicorn.",
+            "Configure Nginx as reverse proxy.",
+            "Use Docker for containerization."
+          ]
+        },
+        {
+          "slideIndex": 10,
+          "slideTitle": "How do you scale Django applications?",
+          "slideDescription": "Django applications are scaled by using load balancers, caching systems like Redis, database replication, and asynchronous task queues like Celery.",
+          "slidePoints": [
+            "Horizontal scaling with multiple app instances.",
+            "Use Redis for caching.",
+            "Use Celery for background tasks."
+          ]
+        },
+
+        {
+          "slideIndex": 11,
+          "slideTitle": "What is Middleware in Django?",
+          "slideDescription": "Middleware in Django is a framework of hooks into request and response processing that allows you to process requests globally before they reach the view or after the response is generated.",
+          "slidePoints": [
+            "Runs on every request and response.",
+            "Used for authentication, logging, security headers.",
+            "Custom middleware can be created."
+          ]
+        },
+        {
+          "slideIndex": 12,
+          "slideTitle": "What is the difference between WSGI and ASGI in Django?",
+          "slideDescription": "WSGI is used for synchronous applications, while ASGI supports asynchronous applications and real-time features like WebSockets.",
+          "slidePoints": [
+            "WSGI handles traditional HTTP requests.",
+            "ASGI supports async views and WebSockets.",
+            "ASGI is preferred for real-time systems."
+          ]
+        },
+        {
+          "slideIndex": 13,
+          "slideTitle": "How do you implement caching in Django?",
+          "slideDescription": "Caching in Django can be implemented at different levels such as per-view caching, template fragment caching, or low-level caching using backends like Redis or Memcached.",
+          "slidePoints": [
+            "Per-view caching using cache_page decorator.",
+            "Template fragment caching for partial UI.",
+            "Use Redis or Memcached as cache backend."
+          ]
+        },
+        {
+          "slideIndex": 14,
+          "slideTitle": "How do you prevent N+1 query problems in Django?",
+          "slideDescription": "The N+1 query problem is prevented by using select_related and prefetch_related to fetch related objects in fewer database queries.",
+          "slidePoints": [
+            "select_related for foreign key relationships.",
+            "prefetch_related for many-to-many relationships.",
+            "Monitor queries using Django Debug Toolbar."
+          ]
+        },
+        {
+          "slideIndex": 15,
+          "slideTitle": "What are Signals in Django?",
+          "slideDescription": "Signals in Django allow certain senders to notify receivers when specific actions occur, enabling decoupled event-driven programming.",
+          "slidePoints": [
+            "Common signals: post_save, pre_save.",
+            "Used for triggering background actions.",
+            "Should be used carefully to avoid hidden logic."
+          ]
+        },
+        {
+          "slideIndex": 16,
+          "slideTitle": "How do you implement background tasks in Django?",
+          "slideDescription": "Background tasks in Django are implemented using task queues like Celery with brokers such as Redis or RabbitMQ to handle asynchronous processing.",
+          "slidePoints": [
+            "Use Celery for async tasks.",
+            "Configure broker like Redis or RabbitMQ.",
+            "Useful for email sending, report generation."
+          ]
+        },
+        {
+          "slideIndex": 17,
+          "slideTitle": "How do you handle environment-specific settings in Django?",
+          "slideDescription": "Environment-specific settings are managed by separating configuration files for development, staging, and production, and using environment variables for sensitive data.",
+          "slidePoints": [
+            "Use separate settings files.",
+            "Store secrets in environment variables.",
+            "Set DEBUG=False in production."
+          ]
+        },
+
+        {
+          "slideIndex": 18,
+          "slideTitle": "How do you structure a large Django project in enterprise applications?",
+          "slideDescription": "In enterprise applications, Django projects are structured using modular apps, separation of concerns, service layers, and clear folder organization to improve maintainability and scalability.",
+          "slidePoints": [
+            "Split features into independent Django apps.",
+            "Use services layer for business logic.",
+            "Keep settings modular (base, dev, prod)."
+          ]
+        },
+        {
+          "slideIndex": 19,
+          "slideTitle": "How do you manage secrets securely in Django production?",
+          "slideDescription": "Secrets like database credentials and API keys should never be hardcoded. They must be stored in environment variables or secret managers.",
+          "slidePoints": [
+            "Use environment variables.",
+            "Use secret managers (AWS Secrets Manager, Vault).",
+            "Never commit secrets to version control."
+          ]
+        },
+        {
+          "slideIndex": 20,
+          "slideTitle": "How do you implement role-based access control (RBAC) in Django?",
+          "slideDescription": "RBAC in Django is implemented using built-in Groups and Permissions or custom permission logic to restrict access based on user roles.",
+          "slidePoints": [
+            "Use Django Groups for roles.",
+            "Assign model-level permissions.",
+            "Create custom permission decorators if needed."
+          ]
+        },
+        {
+          "slideIndex": 21,
+          "slideTitle": "How do you handle database transactions in Django?",
+          "slideDescription": "Database transactions in Django are managed using atomic blocks to ensure data consistency and rollback changes if an error occurs.",
+          "slidePoints": [
+            "Use transaction.atomic().",
+            "Prevents partial database updates.",
+            "Important for financial or critical systems."
+          ]
+        },
+        {
+          "slideIndex": 22,
+          "slideTitle": "How do you monitor Django applications in production?",
+          "slideDescription": "Monitoring is done using logging, performance monitoring tools, and error tracking systems to detect issues proactively.",
+          "slidePoints": [
+            "Use structured logging.",
+            "Integrate tools like Sentry or Prometheus.",
+            "Monitor CPU, memory, DB performance."
+          ]
+        },
+        {
+          "slideIndex": 23,
+          "slideTitle": "How do you optimize Django API performance?",
+          "slideDescription": "API performance can be improved using pagination, caching, query optimization, indexing, and reducing serializer overhead.",
+          "slidePoints": [
+            "Enable pagination for large datasets.",
+            "Optimize queries with select_related.",
+            "Use caching for heavy endpoints."
+          ]
+        },
+        {
+          "slideIndex": 24,
+          "slideTitle": "How do you handle high traffic in Django applications?",
+          "slideDescription": "High traffic is handled by horizontal scaling, load balancing, caching, database replication, and asynchronous task processing.",
+          "slidePoints": [
+            "Deploy multiple app instances.",
+            "Use load balancer like Nginx.",
+            "Implement Redis caching."
+          ]
+        },
+        {
+          "slideIndex": 25,
+          "slideTitle": "How do you implement API rate limiting in Django?",
+          "slideDescription": "API rate limiting restricts the number of requests a user can make in a specific time window to prevent abuse and ensure system stability.",
+          "slidePoints": [
+            "Use DRF throttling classes.",
+            "Implement Redis-based rate limiting.",
+            "Protect public APIs from misuse."
+          ]
+        },
+        {
+          "slideIndex": 26,
+          "slideTitle": "How do you ensure zero-downtime deployment in Django?",
+          "slideDescription": "Zero-downtime deployment is achieved using rolling updates, container orchestration, backward-compatible migrations, and proper CI/CD pipelines.",
+          "slidePoints": [
+            "Use rolling deployments.",
+            "Make migrations backward compatible.",
+            "Automate deployment using CI/CD."
+          ]
+        },
+        {
+          "slideIndex": 27,
+          "slideTitle": "How do you design Django for microservices architecture?",
+          "slideDescription": "In microservices architecture, Django services are designed to be independent, stateless, and communicate through APIs or message brokers like RabbitMQ.",
+          "slidePoints": [
+            "Keep services loosely coupled.",
+            "Use REST or gRPC for communication.",
+            "Use message brokers for async communication."
+          ]
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "name": "Flask Interview (Production & Enterprise Level)",
+      "slides": [
+        {
+          "slideIndex": 0,
+          "slideTitle": "What is Flask and how is it different from Django?",
+          "slideDescription": "Flask is a lightweight micro web framework in Python that provides minimal built-in features and gives developers flexibility to choose their own tools and architecture, unlike Django which is a full-featured framework.",
+          "slidePoints": [
+            "Flask is minimal and flexible.",
+            "No built-in ORM or admin panel.",
+            "Best for microservices and lightweight APIs."
+          ]
+        },
+        {
+          "slideIndex": 1,
+          "slideTitle": "What is WSGI in Flask?",
+          "slideDescription": "WSGI (Web Server Gateway Interface) is a specification that allows Flask applications to communicate with web servers like Gunicorn or uWSGI.",
+          "slidePoints": [
+            "Flask is a WSGI application.",
+            "Gunicorn commonly used in production.",
+            "Separates web server from application logic."
+          ]
+        },
+        {
+          "slideIndex": 2,
+          "slideTitle": "How does routing work in Flask?",
+          "slideDescription": "Routing in Flask maps URLs to Python functions using decorators, allowing developers to define endpoints easily.",
+          "slidePoints": [
+            "Uses @app.route() decorator.",
+            "Supports dynamic URL parameters.",
+            "Can define HTTP methods (GET, POST, etc.)."
+          ]
+        },
+        {
+          "slideIndex": 3,
+          "slideTitle": "How do you structure a production-grade Flask project?",
+          "slideDescription": "A production Flask project is structured using application factory pattern, blueprints for modularity, and separation of configuration for different environments.",
+          "slidePoints": [
+            "Use application factory pattern.",
+            "Use Blueprints to organize modules.",
+            "Separate config for dev, test, prod."
+          ]
+        },
+        {
+          "slideIndex": 4,
+          "slideTitle": "What are Blueprints in Flask?",
+          "slideDescription": "Blueprints allow developers to organize a Flask application into modular components, making large applications maintainable and scalable.",
+          "slidePoints": [
+            "Modularize routes and logic.",
+            "Reusable across projects.",
+            "Helps in scaling large applications."
+          ]
+        },
+        {
+          "slideIndex": 5,
+          "slideTitle": "How do you handle database integration in Flask?",
+          "slideDescription": "Database integration in Flask is typically done using SQLAlchemy ORM or Flask-SQLAlchemy extension to interact with relational databases.",
+          "slidePoints": [
+            "Use SQLAlchemy ORM.",
+            "Support for migrations via Flask-Migrate.",
+            "Manage connection pooling properly."
+          ]
+        },
+        {
+          "slideIndex": 6,
+          "slideTitle": "How do you manage environment variables in Flask?",
+          "slideDescription": "Environment variables in Flask are managed using configuration classes and tools like python-dotenv to separate sensitive data from code.",
+          "slidePoints": [
+            "Use config.py for structured config.",
+            "Load secrets from environment variables.",
+            "Never hardcode credentials."
+          ]
+        },
+        {
+          "slideIndex": 7,
+          "slideTitle": "How do you implement authentication in Flask?",
+          "slideDescription": "Authentication in Flask can be implemented using extensions like Flask-Login for session-based auth or JWT for token-based authentication.",
+          "slidePoints": [
+            "Use Flask-Login for session management.",
+            "Use JWT for REST APIs.",
+            "Implement role-based authorization."
+          ]
+        },
+        {
+          "slideIndex": 8,
+          "slideTitle": "How do you handle error handling in Flask?",
+          "slideDescription": "Flask allows custom error handlers to manage application errors gracefully and return meaningful responses.",
+          "slidePoints": [
+            "Use @app.errorhandler decorator.",
+            "Log exceptions properly.",
+            "Return standardized JSON error responses."
+          ]
+        },
+        {
+          "slideIndex": 9,
+          "slideTitle": "How do you deploy Flask applications in production?",
+          "slideDescription": "Flask applications are deployed using WSGI servers like Gunicorn behind reverse proxies such as Nginx, often containerized using Docker.",
+          "slidePoints": [
+            "Use Gunicorn or uWSGI.",
+            "Use Nginx as reverse proxy.",
+            "Containerize using Docker."
+          ]
+        },
+        {
+          "slideIndex": 10,
+          "slideTitle": "How do you scale Flask applications?",
+          "slideDescription": "Flask applications are scaled by running multiple instances behind a load balancer, using caching systems like Redis, and implementing asynchronous background workers.",
+          "slidePoints": [
+            "Horizontal scaling with multiple instances.",
+            "Use Redis for caching.",
+            "Use Celery for background tasks."
+          ]
+        },
+        {
+          "slideIndex": 11,
+          "slideTitle": "How do you implement background tasks in Flask?",
+          "slideDescription": "Background tasks in Flask are implemented using Celery with a message broker like Redis or RabbitMQ for asynchronous processing.",
+          "slidePoints": [
+            "Use Celery for distributed task queue.",
+            "Configure Redis or RabbitMQ as broker.",
+            "Handle long-running tasks asynchronously."
+          ]
+        },
+        {
+          "slideIndex": 12,
+          "slideTitle": "How do you secure a Flask application?",
+          "slideDescription": "Securing a Flask application involves input validation, authentication, HTTPS configuration, rate limiting, and proper secret management.",
+          "slidePoints": [
+            "Enable HTTPS in production.",
+            "Implement rate limiting.",
+            "Use secure cookies and JWT tokens."
+          ]
+        },
+
+        {
+          "slideIndex": 13,
+          "slideTitle": "What is the Application Factory Pattern in Flask?",
+          "slideDescription": "The Application Factory Pattern is a design pattern where the Flask app is created inside a function instead of globally, allowing better configuration management and easier testing.",
+          "slidePoints": [
+            "Creates app inside a create_app() function.",
+            "Supports multiple configurations (dev, prod, test).",
+            "Improves modularity and testability."
+          ]
+        },
+        {
+          "slideIndex": 14,
+          "slideTitle": "How does Flask handle request and application context?",
+          "slideDescription": "Flask uses request and application context to manage data specific to a request or application instance, ensuring thread safety.",
+          "slidePoints": [
+            "request object stores request-specific data.",
+            "g object stores temporary request data.",
+            "Contexts ensure isolation per request."
+          ]
+        },
+        {
+          "slideIndex": 15,
+          "slideTitle": "How do you implement RESTful APIs in Flask?",
+          "slideDescription": "RESTful APIs in Flask are implemented using route decorators, proper HTTP methods, JSON responses, and optionally Flask-RESTful or Flask-RESTX for structured APIs.",
+          "slidePoints": [
+            "Use proper HTTP verbs (GET, POST, PUT, DELETE).",
+            "Return JSON responses.",
+            "Use Flask-RESTful for cleaner structure."
+          ]
+        },
+        {
+          "slideIndex": 16,
+          "slideTitle": "How do you validate input data in Flask APIs?",
+          "slideDescription": "Input validation in Flask can be implemented using libraries like Marshmallow or Pydantic to ensure incoming request data meets required formats and constraints.",
+          "slidePoints": [
+            "Use Marshmallow for schema validation.",
+            "Validate request.json payload.",
+            "Return meaningful error responses."
+          ]
+        },
+        {
+          "slideIndex": 17,
+          "slideTitle": "How do you implement rate limiting in Flask?",
+          "slideDescription": "Rate limiting in Flask can be implemented using Flask-Limiter extension to control the number of requests a client can make within a given time frame.",
+          "slidePoints": [
+            "Use Flask-Limiter extension.",
+            "Store limits in Redis for distributed systems.",
+            "Prevent abuse of public APIs."
+          ]
+        },
+        {
+          "slideIndex": 18,
+          "slideTitle": "How do you log requests and errors in Flask?",
+          "slideDescription": "Logging in Flask is handled using Python’s logging module to record application events, errors, and request details for monitoring and debugging.",
+          "slidePoints": [
+            "Configure logging handlers and formatters.",
+            "Log exceptions and stack traces.",
+            "Integrate with monitoring tools like Sentry."
+          ]
+        },
+        {
+          "slideIndex": 19,
+          "slideTitle": "How do you test Flask applications?",
+          "slideDescription": "Flask applications are tested using pytest or unittest by creating test clients that simulate HTTP requests without running a real server.",
+          "slidePoints": [
+            "Use Flask test client.",
+            "Write unit and integration tests.",
+            "Mock database and external services."
+          ]
+        },
+        {
+          "slideIndex": 20,
+          "slideTitle": "How do you handle CORS in Flask?",
+          "slideDescription": "CORS (Cross-Origin Resource Sharing) in Flask is handled using Flask-CORS extension to allow or restrict resources to be requested from different domains.",
+          "slidePoints": [
+            "Use Flask-CORS extension.",
+            "Configure allowed origins properly.",
+            "Avoid enabling CORS for all domains in production."
+          ]
+        }
+      ]
+    },
+    {
+      "id": 18,
+      "name": "FastAPI Interview (Production & Enterprise Level)",
+      "slides": [
+        {
+          "slideIndex": 0,
+          "slideTitle": "What is FastAPI and why is it popular?",
+          "slideDescription": "FastAPI is a modern, high-performance Python web framework used to build APIs. It is popular because of its speed, automatic validation, type hints support, and automatic API documentation.",
+          "slidePoints": [
+            "Built on Starlette and Pydantic.",
+            "Supports async programming natively.",
+            "Auto-generates Swagger and OpenAPI docs."
+          ]
+        },
+        {
+          "slideIndex": 1,
+          "slideTitle": "How is FastAPI different from Flask and Django?",
+          "slideDescription": "FastAPI is designed specifically for building APIs with automatic validation and async support, while Flask is minimal and Django is a full-stack framework.",
+          "slidePoints": [
+            "Built-in request validation using Pydantic.",
+            "Native async/await support.",
+            "Better performance for APIs."
+          ]
+        },
+        {
+          "slideIndex": 2,
+          "slideTitle": "What is Pydantic and how is it used in FastAPI?",
+          "slideDescription": "Pydantic is a data validation and settings management library that uses Python type hints to validate request and response data in FastAPI.",
+          "slidePoints": [
+            "Defines request/response models.",
+            "Automatic data validation.",
+            "Generates clear error responses."
+          ]
+        },
+        {
+          "slideIndex": 3,
+          "slideTitle": "How does dependency injection work in FastAPI?",
+          "slideDescription": "FastAPI provides a built-in dependency injection system that allows reusable components like database connections or authentication logic to be injected into routes.",
+          "slidePoints": [
+            "Use Depends() for dependencies.",
+            "Encourages clean architecture.",
+            "Improves testability and reusability."
+          ]
+        },
+        {
+          "slideIndex": 4,
+          "slideTitle": "How do you connect FastAPI with a database?",
+          "slideDescription": "FastAPI connects to databases using ORMs like SQLAlchemy or Tortoise ORM, and supports both synchronous and asynchronous database drivers.",
+          "slidePoints": [
+            "Use SQLAlchemy for relational DB.",
+            "Use asyncpg for async PostgreSQL.",
+            "Manage sessions properly per request."
+          ]
+        },
+        {
+          "slideIndex": 5,
+          "slideTitle": "How does FastAPI handle asynchronous programming?",
+          "slideDescription": "FastAPI supports asynchronous endpoints using async and await keywords, allowing efficient handling of I/O-bound operations like database calls and API requests.",
+          "slidePoints": [
+            "Use async def for async routes.",
+            "Works with ASGI servers like Uvicorn.",
+            "Improves performance under high concurrency."
+          ]
+        },
+        {
+          "slideIndex": 6,
+          "slideTitle": "What is ASGI and why is it important in FastAPI?",
+          "slideDescription": "ASGI (Asynchronous Server Gateway Interface) is a standard that allows asynchronous frameworks like FastAPI to handle concurrent requests efficiently.",
+          "slidePoints": [
+            "Successor to WSGI.",
+            "Supports WebSockets and async tasks.",
+            "Common server: Uvicorn."
+          ]
+        },
+        {
+          "slideIndex": 7,
+          "slideTitle": "How do you implement authentication in FastAPI?",
+          "slideDescription": "Authentication in FastAPI is commonly implemented using OAuth2 with JWT tokens to secure API endpoints.",
+          "slidePoints": [
+            "Use OAuth2PasswordBearer.",
+            "Generate and validate JWT tokens.",
+            "Protect routes with dependency injection."
+          ]
+        },
+        {
+          "slideIndex": 8,
+          "slideTitle": "How do you implement background tasks in FastAPI?",
+          "slideDescription": "FastAPI provides BackgroundTasks for lightweight async tasks, and for heavy tasks it integrates with Celery using Redis or RabbitMQ.",
+          "slidePoints": [
+            "Use BackgroundTasks for simple tasks.",
+            "Use Celery for distributed processing.",
+            "Avoid blocking main request thread."
+          ]
+        },
+        {
+          "slideIndex": 9,
+          "slideTitle": "How do you handle environment configuration in FastAPI?",
+          "slideDescription": "Environment configuration in FastAPI is handled using Pydantic BaseSettings or environment variables to manage secrets and configuration safely.",
+          "slidePoints": [
+            "Use BaseSettings class.",
+            "Load secrets from environment variables.",
+            "Separate dev and prod configs."
+          ]
+        },
+        {
+          "slideIndex": 10,
+          "slideTitle": "How do you deploy FastAPI in production?",
+          "slideDescription": "FastAPI applications are deployed using ASGI servers like Uvicorn or Gunicorn with Uvicorn workers, often behind Nginx and containerized with Docker.",
+          "slidePoints": [
+            "Use Uvicorn or Gunicorn with Uvicorn workers.",
+            "Use Nginx as reverse proxy.",
+            "Containerize using Docker."
+          ]
+        },
+        {
+          "slideIndex": 11,
+          "slideTitle": "How do you scale FastAPI applications?",
+          "slideDescription": "FastAPI applications are scaled horizontally using multiple instances behind a load balancer, caching with Redis, and async background workers.",
+          "slidePoints": [
+            "Run multiple app instances.",
+            "Use Redis for caching.",
+            "Use message brokers for async processing."
           ]
         }
       ]
