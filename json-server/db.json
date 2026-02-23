@@ -1,0 +1,30 @@
+{
+  "projects": [
+    {
+      "id": 1,
+      "name": "Project 1",
+      "slides": [
+        {
+          "slideIndex": 0,
+          "slideTitle": "Introduction",
+          "slideDescription": "Overview of the presentation",
+          "slidePoints": [
+            "Point 1",
+            "Point 2",
+            "Point 3"
+          ]
+        },
+        {
+          "slideIndex": 1,
+          "slideTitle": "Features",
+          "slideDescription": "Main Features",
+          "slidePoints": [
+            "Feature 1",
+            "Feature 2",
+            "Feature 3"
+          ]
+        }
+      ]
+    }
+  ]
+}

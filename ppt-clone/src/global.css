@@ -1,0 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  padding-left: var(--sidebar-width, 0);
+  transition: padding-left 300ms ease;
+}
