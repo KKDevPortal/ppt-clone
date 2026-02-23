@@ -1865,6 +1865,511 @@
           ]
         }
       ]
+    },
+    {
+      "id": 19,
+      "name": "Java Mastery Interview Deck",
+      "slides": [
+        {
+          "slideIndex": 0,
+          "slideTitle": "1. Is Java a 100% Object-Oriented language?",
+          "slideDescription": "No, Java is not 100% object-oriented because it supports primitive data types.",
+          "slidePoints": [
+            "Primitive types like int, char, and boolean are not objects.",
+            "To bridge this gap, Java provides Wrapper classes (Integer, Character, etc.).",
+            "Static methods and variables also exist outside the context of a specific object instance."
+          ]
+        },
+        {
+          "slideIndex": 1,
+          "slideTitle": "2. Why is the 'main' method static in Java?",
+          "slideDescription": "It allows the JVM to call the method without creating an instance of the class.",
+          "slidePoints": [
+            "Saves memory by avoiding object creation for the entry point.",
+            "If it weren't static, the JVM would face ambiguity on which constructor to call.",
+            "It is loaded into memory during the class-loading phase."
+          ]
+        },
+        {
+          "slideIndex": 2,
+          "slideTitle": "3. What is the difference between equals() and ==?",
+          "slideDescription": "== compares memory addresses (references), while equals() compares the actual content.",
+          "slidePoints": [
+            "== is a binary operator; equals() is a method defined in the Object class.",
+            "For primitives, == is used for value comparison.",
+            "Developers should override equals() to define 'logical equality' for custom objects."
+          ]
+        },
+        {
+          "slideIndex": 3,
+          "slideTitle": "4. What is the 'final' keyword used for?",
+          "slideDescription": "It is used to apply restrictions on class, method, and variable definitions.",
+          "slidePoints": [
+            "Final Variable: Becomes a constant and cannot be reassigned.",
+            "Final Method: Cannot be overridden by subclasses.",
+            "Final Class: Cannot be inherited (e.g., the String class)."
+          ]
+        },
+        {
+          "slideIndex": 4,
+          "slideTitle": "5. Explain the Java Collection Hierarchy.",
+          "slideDescription": "It is a framework that provides an architecture to store and manipulate a group of objects.",
+          "slidePoints": [
+            "The root interface is Collection, which is extended by List, Set, and Queue.",
+            "Map is part of the framework but does not extend the Collection interface.",
+            "Iterators are used to traverse through these collections uniformly."
+          ]
+        },
+        {
+          "slideIndex": 5,
+          "slideTitle": "6. ArrayList vs. Vector",
+          "slideDescription": "ArrayList is non-synchronized and faster, whereas Vector is synchronized and thread-safe.",
+          "slidePoints": [
+            "ArrayList increments its size by 50% when full; Vector doubles it (100%).",
+            "Vector is considered legacy and is rarely used in modern applications.",
+            "Use Collections.synchronizedList() if you need a thread-safe ArrayList."
+          ]
+        },
+        {
+          "slideIndex": 6,
+          "slideTitle": "7. How does HashMap handle collisions internally?",
+          "slideDescription": "It uses a technique called Chaining via a LinkedList or a Balanced Tree.",
+          "slidePoints": [
+            "When two keys have the same hash, they are stored in the same bucket.",
+            "In Java 8, if a bucket exceeds a threshold (8), the LinkedList converts to a Red-Black Tree.",
+            "This improves search time from O(n) to O(log n) for high-collision scenarios."
+          ]
+        },
+        {
+          "slideIndex": 7,
+          "slideTitle": "8. Interface vs. Abstract Class",
+          "slideDescription": "Interfaces define a contract (what to do), while Abstract classes define an identity (what it is).",
+          "slidePoints": [
+            "A class can implement multiple interfaces but extend only one abstract class.",
+            "Abstract classes can have constructors and state (instance variables); interfaces cannot.",
+            "Java 8+ interfaces can have default and static methods."
+          ]
+        },
+        {
+          "slideIndex": 8,
+          "slideTitle": "9. What is the 'Diamond Problem' in Inheritance?",
+          "slideDescription": "It is a conflict where a class inherits from two parents that have a method with the same signature.",
+          "slidePoints": [
+            "Java avoids this in classes by not allowing multiple inheritance.",
+            "It can occur with Java 8 default methods in interfaces.",
+            "The compiler forces the developer to override and resolve the conflict manually."
+          ]
+        },
+        {
+          "slideIndex": 9,
+          "slideTitle": "10. Exception Handling: throw vs. throws",
+          "slideDescription": "'throw' is used to explicitly trigger an exception, while 'throws' declares that a method might cast one.",
+          "slidePoints": [
+            "throw is followed by an instance (e.g., new Exception()); throws is followed by class names.",
+            "throw is used within the method body; throws is used in the method signature.",
+            "throws helps the caller of the method handle the potential checked exception."
+          ]
+        },
+        {
+          "slideIndex": 10,
+          "slideTitle": "11. What is the Java Stream API?",
+          "slideDescription": "A functional approach to processing sequences of elements from a collection.",
+          "slidePoints": [
+            "It supports pipeline operations like filter(), map(), and reduce().",
+            "Streams do not store data; they carry it from a source through a pipeline.",
+            "Intermediate operations are lazy and only execute when a terminal operation is called."
+          ]
+        },
+        {
+          "slideIndex": 11,
+          "slideTitle": "12. Functional Interfaces and Lambda Expressions",
+          "slideDescription": "A Functional Interface has exactly one abstract method and can be represented by a Lambda.",
+          "slidePoints": [
+            "Examples include Runnable, Callable, and Consumer.",
+            "The @FunctionalInterface annotation ensures the single abstract method rule.",
+            "Lambdas provide a concise way to implement the method without anonymous inner classes."
+          ]
+        },
+        {
+          "slideIndex": 12,
+          "slideTitle": "13. How does Garbage Collection work?",
+          "slideDescription": "It automatically reclaims heap memory by destroying objects that are no longer reachable.",
+          "slidePoints": [
+            "The JVM uses the Mark-and-Sweep algorithm.",
+            "The Heap is divided into Young Generation (Eden, S0, S1) and Old Generation.",
+            "System.gc() is a request, not a command, and does not guarantee immediate execution."
+          ]
+        },
+        {
+          "slideIndex": 13,
+          "slideTitle": "14. What is 'Volatile' keyword?",
+          "slideDescription": "It ensures that a variable is always read from and written to the main memory, not the CPU cache.",
+          "slidePoints": [
+            "It solves the visibility problem in multi-threaded environments.",
+            "It does not provide atomicity (use AtomicInteger or Synchronized for that).",
+            "It prevents compiler reordering of the code involving the volatile variable."
+          ]
+        },
+        {
+          "slideIndex": 14,
+          "slideTitle": "15. Synchronized block vs. Synchronized method",
+          "slideDescription": "Blocks provide more granular control by locking only a specific portion of the code.",
+          "slidePoints": [
+            "A synchronized method locks the entire 'this' object.",
+            "Synchronized blocks can lock on a specific object, reducing thread contention.",
+            "Blocks are generally preferred for better performance."
+          ]
+        },
+        {
+          "slideIndex": 15,
+          "slideTitle": "16. Explain the 'Fail-Fast' vs. 'Fail-Safe' Iterators.",
+          "slideDescription": "Fail-fast throws an exception if a collection is modified during iteration; Fail-safe does not.",
+          "slidePoints": [
+            "Fail-fast: Uses a 'modCount' and throws ConcurrentModificationException (e.g., HashMap).",
+            "Fail-safe: Works on a copy or clone of the collection (e.g., CopyOnWriteArrayList).",
+            "Fail-safe iterators require more memory due to the overhead of copying."
+          ]
+        },
+        {
+          "slideIndex": 16,
+          "slideTitle": "17. What is Reflection in Java?",
+          "slideDescription": "An API used to examine or modify the behavior of methods, classes, and interfaces at runtime.",
+          "slidePoints": [
+            "It can access private fields and methods of a class.",
+            "It is widely used by frameworks like Spring (for DI) and Hibernate.",
+            "Drawbacks include performance overhead and security risks."
+          ]
+        },
+        {
+          "slideIndex": 17,
+          "slideTitle": "18. Try-with-Resources",
+          "slideDescription": "A feature that ensures each resource is closed at the end of the statement.",
+          "slidePoints": [
+            "Eliminates the need for explicit .close() calls in a finally block.",
+            "Any object that implements java.lang.AutoCloseable can be used.",
+            "Reduces boilerplate code and prevents memory leaks."
+          ]
+        },
+        {
+          "slideIndex": 18,
+          "slideTitle": "19. ClassLoader in Java",
+          "slideDescription": "A part of the JRE that dynamically loads Java classes into the JVM.",
+          "slidePoints": [
+            "Three main types: Bootstrap (Core APIs), Extension, and Application ClassLoaders.",
+            "It follows the Delegation Model (parents are asked to load first).",
+            "Classes are loaded only when they are actually needed (Lazy loading)."
+          ]
+        },
+        {
+          "slideIndex": 19,
+          "slideTitle": "20. CompletableFuture vs. Future",
+          "slideDescription": "CompletableFuture is a more powerful, non-blocking version of Future introduced in Java 8.",
+          "slidePoints": [
+            "Future.get() is blocking; CompletableFuture supports callback methods like thenApply().",
+            "It allows for manual completion and exception handling.",
+            "Multiple CompletableFutures can be combined or chained together easily."
+          ]
+        },
+        {
+          "slideIndex": 20,
+          "slideTitle": "21. Why is Composition preferred over Inheritance?",
+          "slideDescription": "Composition is more flexible as it defines a 'has-a' relationship rather than a rigid 'is-a' relationship.",
+          "slidePoints": [
+            "It allows changing behavior at runtime by injecting different object implementations.",
+            "Inheritance breaks encapsulation by exposing subclass to parent implementation details.",
+            "Composition prevents the 'Class Explosion' problem where too many subclasses are created for small variations."
+          ]
+        },
+        {
+          "slideIndex": 21,
+          "slideTitle": "22. Explain the Diamond Problem in Inheritance.",
+          "slideDescription": "It is a conflict where a class inherits two different implementations of the same method from two parents.",
+          "slidePoints": [
+            "Java avoids this by not allowing multiple inheritance through classes.",
+            "It can occur in Java 8 with 'Default Methods' in multiple interfaces.",
+            "The compiler forces the developer to override the method to resolve which implementation to use."
+          ]
+        },
+        {
+          "slideIndex": 22,
+          "slideTitle": "23. Cohesion vs. Coupling",
+          "slideDescription": "High Cohesion means a class has a single focused purpose; Low Coupling means classes have minimum dependencies.",
+          "slidePoints": [
+            "High Cohesion makes code easier to maintain and understand (Single Responsibility Principle).",
+            "Low Coupling ensures that changing one class doesn't break others throughout the system.",
+            "The ultimate goal of OOPS design is to achieve High Cohesion and Low Coupling simultaneously."
+          ]
+        },
+        {
+          "slideIndex": 23,
+          "slideTitle": "24. Method Hiding vs. Method Overriding",
+          "slideDescription": "Overriding applies to instance methods (runtime), while Hiding applies to static methods (compile-time).",
+          "slidePoints": [
+            "Overriding uses Dynamic Method Dispatch to call the version based on the object instance.",
+            "In Hiding, the version called depends on the reference type used at compile-time.",
+            "Static methods cannot be overridden because they belong to the Class, not the Object."
+          ]
+        },
+        {
+          "slideIndex": 24,
+          "slideTitle": "25. Strong vs. Weak 'Has-A' (Composition vs. Aggregation)",
+          "slideDescription": "Composition implies a death relationship where the child cannot exist without the parent.",
+          "slidePoints": [
+            "Aggregation: Weak relationship (e.g., a Library has Students; Students exist if Library is deleted).",
+            "Composition: Strong relationship (e.g., a Human has a Heart; Heart cannot exist if Human is deleted).",
+            "In code, Composition is often implemented by instantiating the child inside the parent's constructor."
+          ]
+        },
+
+        {
+          "slideIndex": 25,
+          "slideTitle": "26. What is a Functional Interface?",
+          "slideDescription": "An interface that contains exactly one abstract method, acting as the foundation for Lambda expressions.",
+          "slidePoints": [
+            "Common examples include Runnable, Callable, and Comparator.",
+            "The @FunctionalInterface annotation is used to ensure the single abstract method rule is followed.",
+            "They allow treating functionality as a method argument, enabling functional programming in Java."
+          ]
+        },
+        {
+          "slideIndex": 26,
+          "slideTitle": "27. Why were Default Methods introduced in Java 8?",
+          "slideDescription": "To allow adding new methods to interfaces without breaking the existing implementation classes.",
+          "slidePoints": [
+            "Prior to Java 8, adding a method to an interface required changing every class that implemented it.",
+            "They enable 'Backward Compatibility' for large libraries like the Collections API (e.g., stream() method).",
+            "If a class implements two interfaces with the same default method, the developer must override it to resolve the conflict."
+          ]
+        },
+        {
+          "slideIndex": 27,
+          "slideTitle": "28. Marker Interface vs. Normal Interface",
+          "slideDescription": "A Marker Interface is an empty interface used to 'tag' a class for a specific behavior by the JVM.",
+          "slidePoints": [
+            "Examples: Serializable (allows object streaming) and Cloneable (allows object copying).",
+            "They contain no methods or fields; they simply act as a signal to the compiler or runtime.",
+            "In modern Java, Annotations (@) are generally preferred over Marker Interfaces for adding metadata."
+          ]
+        },
+        {
+          "slideIndex": 28,
+          "slideTitle": "29. Can an Interface have Static and Private methods?",
+          "slideDescription": "Yes; Static methods were added in Java 8, and Private methods were added in Java 9.",
+          "slidePoints": [
+            "Static methods: Provide utility logic belonging to the interface, not the implementing class.",
+            "Private methods: Used to share common code between multiple default methods within the same interface.",
+            "Neither Static nor Private methods can be overridden by the implementing class."
+          ]
+        },
+        {
+          "slideIndex": 29,
+          "slideTitle": "30. Interface vs. Abstract Class: Which one to choose?",
+          "slideDescription": "Use Interfaces for 'can-do' capabilities and Abstract Classes for 'is-a' core identities.",
+          "slidePoints": [
+            "Choose Interfaces when you want to define a contract for unrelated classes (e.g., 'JSONSerializable').",
+            "Choose Abstract Classes when you want to share code/state among closely related classes (e.g., 'BaseTemplate').",
+            "Java supports multiple inheritance of interfaces, but only single inheritance for abstract classes."
+          ]
+        },
+        {
+          "slideIndex": 30,
+          "slideTitle": "31. What are the four main types of Functional Interfaces?",
+          "slideDescription": "Java provides Consumer, Supplier, Predicate, and Function as the core functional building blocks.",
+          "slidePoints": [
+            "Predicate: Takes one argument and returns a boolean (used for filtering).",
+            "Consumer: Takes one argument and returns nothing (used for side effects).",
+            "Supplier: Takes no arguments and returns a value (used for lazy generation).",
+            "Function: Takes one argument and returns a result of a different type (used for mapping)."
+          ]
+        },
+        {
+          "slideIndex": 31,
+          "slideTitle": "32. What problem does the Optional class solve?",
+          "slideDescription": "Optional is a container object used to represent the presence or absence of a value, helping to avoid NullPointerExceptions.",
+          "slidePoints": [
+            "It encourages developers to check for nullity explicitly rather than relying on manual null checks.",
+            "It provides methods like isPresent() and ifPresent() to handle values safely.",
+            "It should be used primarily as a return type for methods that might not have a result."
+          ]
+        },
+        {
+          "slideIndex": 32,
+          "slideTitle": "33. Optional: orElse() vs. orElseGet()",
+          "slideDescription": "orElse() evaluates the default value even if the Optional is not empty, while orElseGet() is lazy.",
+          "slidePoints": [
+            "orElse(defaultValue) is called every time, which can be a performance hit if the default involves heavy logic.",
+            "orElseGet(Supplier) is only executed if the Optional is empty.",
+            "Always prefer orElseGet() when the fallback value requires a database call or complex calculation."
+          ]
+        },
+        {
+          "slideIndex": 33,
+          "slideTitle": "34. Can a Functional Interface have more than one method?",
+          "slideDescription": "Yes, but it can only have exactly one 'Abstract' method.",
+          "slidePoints": [
+            "It can have any number of 'default' and 'static' methods without losing its functional status.",
+            "It can also override methods from the Object class (like equals or toString) without count toward the limit.",
+            "The @FunctionalInterface annotation will trigger a compiler error if a second abstract method is added."
+          ]
+        },
+        {
+          "slideIndex": 34,
+          "slideTitle": "35. How does Method Reference (::) relate to Functional Interfaces?",
+          "slideDescription": "Method references are a shorthand notation of a Lambda expression to call an existing method.",
+          "slidePoints": [
+            "There are four types: Static, Instance, Constructor, and Arbitrary Object type references.",
+            "Example: 'System.out::println' is a shorthand for '(x) -> System.out.println(x)'.",
+            "It makes the code significantly more readable by removing boilerplate lambda syntax."
+          ]
+        }
+      ]
+    },
+
+    {
+      "id": 20,
+      "name": "AWS SME Interview Prep",
+      "slides": [
+        {
+          "slideIndex": 0,
+          "slideTitle": "Basic: Scaling vs. Instance Type",
+          "slideDescription": "Vertical scaling (Scaling Up) increases the RAM/CPU of a single instance, whereas Horizontal scaling (Scaling Out) adds more instances to a resource pool to handle load.",
+          "slidePoints": [
+            "Horizontal scaling is preferred for high availability using Auto Scaling Groups.",
+            "Vertical scaling is limited by the maximum capacity of the largest instance type.",
+            "Horizontal scaling allows for 'pay-as-you-go' elasticity during traffic spikes."
+          ]
+        },
+        {
+          "slideIndex": 1,
+          "slideTitle": "Moderate: Microservices Latency Issues",
+          "slideDescription": "Implement Amazon ElastiCache (Redis/Memcached) to store frequently accessed session data and results of expensive DB queries to reduce latency.",
+          "slidePoints": [
+            "In-memory caching reduces the I/O load on the primary RDS/DynamoDB instance.",
+            "Use a 'Lazy Loading' strategy to ensure the cache only contains requested data.",
+            "Significantly improves application response time for read-heavy workloads."
+          ]
+        },
+        {
+          "slideIndex": 2,
+          "slideTitle": "Advanced: Hybrid Cloud Connectivity",
+          "slideDescription": "Use AWS Direct Connect for a dedicated private network connection from on-premises to AWS, providing consistent bandwidth and lower latency than VPN.",
+          "slidePoints": [
+            "Bypasses the public internet to reduce data transfer costs and increase security.",
+            "Use a Transit Gateway to share the Direct Connect across multiple VPCs and accounts.",
+            "Ideal for large-scale data migration or real-time synchronized hybrid environments."
+          ]
+        },
+        {
+          "slideIndex": 3,
+          "slideTitle": "Expert: Distributed Transaction Consistency",
+          "slideDescription": "Utilize the Saga Pattern implemented via AWS Step Functions to manage distributed transactions and maintain data consistency across microservices.",
+          "slidePoints": [
+            "Uses 'Compensating Transactions' to undo previous steps if a workflow fails mid-process.",
+            "Step Functions provide a visual, state-machine-based orchestration for complex logic.",
+            "Ensures 'Eventual Consistency' without the performance bottleneck of 2-Phase Commit (2PC)."
+          ]
+        },
+        {
+          "slideIndex": 4,
+          "slideTitle": "Basic: Enhancing Database Performance",
+          "slideDescription": "Deploy RDS Read Replicas to offload read traffic from the primary DB instance, increasing overall application throughput.",
+          "slidePoints": [
+            "Primary DB handles all Writes; Replicas handle SELECT queries.",
+            "Asynchronous replication allows for up to 15 replicas per primary instance.",
+            "Can be promoted to a standalone DB if the primary instance fails (Manual or Scripted)."
+          ]
+        },
+        {
+          "slideIndex": 5,
+          "slideTitle": "Moderate: Static Content Acceleration",
+          "slideDescription": "Configure Amazon CloudFront as a CDN to cache static assets (images, JS, CSS) at Edge Locations closer to the end-users.",
+          "slidePoints": [
+            "Reduces 'First Byte' latency by serving content from the nearest AWS Point of Presence.",
+            "Origin Access Control (OAC) ensures S3 buckets are only accessible via CloudFront.",
+            "Significantly lowers data transfer costs compared to serving directly from S3 or EC2."
+          ]
+        },
+        {
+          "slideIndex": 6,
+          "slideTitle": "Advanced: Cross-Account Security Governance",
+          "slideDescription": "Utilize AWS Organizations and Service Control Policies (SCPs) to set permission guardrails across multiple AWS accounts.",
+          "slidePoints": [
+            "SCPs override IAM permissions—if an SCP denies a service, no user in that account can use it.",
+            "Enables centralized billing and consolidated logging via CloudTrail across the organization.",
+            "Essential for 'Landing Zone' architectures to ensure compliance in regulated industries."
+          ]
+        },
+        {
+          "slideIndex": 7,
+          "slideTitle": "Expert: Optimizing Lambda Cold Starts",
+          "slideDescription": "Enable Provisioned Concurrency for Lambda functions to keep a specified number of environments initialized and ready to respond immediately.",
+          "slidePoints": [
+            "Eliminates initialization latency (Cold Start) for latency-sensitive API calls.",
+            "Best used for predictable traffic spikes or mission-critical microservices.",
+            "Combine with Power Tuning to find the optimal Memory/CPU ratio for cost-performance balance."
+          ]
+        },
+        {
+          "slideIndex": 8,
+          "slideTitle": "Advanced: Decoupling with Event-Driven Architecture",
+          "slideDescription": "Implement Amazon EventBridge as a serverless event bus to route events between AWS services, integrated SaaS apps, and your own software.",
+          "slidePoints": [
+            "Eliminates tight coupling by allowing services to 'subscribe' to specific event patterns.",
+            "Supports schema discovery to automate the mapping of event data structures.",
+            "Provides built-in retry logic and dead-letter queues (DLQ) for failed event delivery."
+          ]
+        },
+        {
+          "slideIndex": 9,
+          "slideTitle": "Basic: Secure Remote Access",
+          "slideDescription": "Use AWS Systems Manager Session Manager to manage EC2 instances via a browser-based shell or CLI without opening inbound port 22 or 3389.",
+          "slidePoints": [
+            "Eliminates the need to maintain bastion hosts or manage SSH keys.",
+            "Provides a centralized audit log of all commands executed via AWS CloudTrail.",
+            "Requires the SSM Agent to be installed and an IAM role with appropriate permissions."
+          ]
+        },
+        {
+          "slideIndex": 10,
+          "slideTitle": "Moderate: Database High Availability",
+          "slideDescription": "Enable Amazon RDS Multi-AZ deployment to automatically failover to a synchronous secondary instance in a different Availability Zone during a failure.",
+          "slidePoints": [
+            "Provides high availability and data durability, not designed for read scaling.",
+            "AWS automatically updates DNS records to point to the standby instance during failover.",
+            "Ideal for production workloads where zero data loss and minimal downtime are required."
+          ]
+        },
+        {
+          "slideIndex": 11,
+          "slideTitle": "Advanced: Blue/Green Deployment Strategy",
+          "slideDescription": "Utilize AWS CodeDeploy to shift traffic from an old application version (Blue) to a new version (Green) using a weighted Route 53 record or Load Balancer target group.",
+          "slidePoints": [
+            "Allows for testing the new version in a production-like environment before fully cutting over.",
+            "Enables near-instant rollback to the 'Blue' environment if bugs are detected.",
+            "Reduces downtime and deployment risk compared to 'In-place' updates."
+          ]
+        },
+        {
+          "slideIndex": 12,
+          "slideTitle": "Expert: Secure Cross-Account Secret Management",
+          "slideDescription": "Use AWS Secrets Manager with cross-account IAM roles and resource-based policies to centralize sensitive credentials in a security account.",
+          "slidePoints": [
+            "Supports automatic rotation of credentials for RDS, Redshift, and other services.",
+            "Encrypts secrets using AWS KMS; access is logged and audited in CloudTrail.",
+            "Allows microservices in different VPCs/Accounts to retrieve secrets securely via an API call."
+          ]
+        },
+        {
+          "slideIndex": 13,
+          "slideTitle": "Moderate: Handling Bursty Web Traffic",
+          "slideDescription": "Deploy an Application Load Balancer (ALB) with an Auto Scaling Group (ASG) using Predictive Scaling to adjust capacity based on historical patterns.",
+          "slidePoints": [
+            "ALB performs health checks to ensure traffic is only routed to healthy instances.",
+            "Target Tracking policies maintain a specific metric (e.g., 50% CPU utilization).",
+            "Ensures performance stability while minimizing costs during low-traffic periods."
+          ]
+        }
+      ]
     }
   ]
 }
