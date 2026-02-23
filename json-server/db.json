@@ -8,20 +8,195 @@
           "slideIndex": 0,
           "slideTitle": "Introduction",
           "slideDescription": "Overview of the presentation",
-          "slidePoints": [
-            "Point 1",
-            "Point 2",
-            "Point 3"
-          ]
+          "slidePoints": ["Point 1", "Point 2", "Point 3"]
         },
         {
           "slideIndex": 1,
           "slideTitle": "Features",
           "slideDescription": "Main Features",
+          "slidePoints": ["Feature 1", "Feature 2", "Feature 3"]
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "React 19 Complete Learning",
+      "slides": [
+        {
+          "slideIndex": 0,
+          "slideTitle": "What is React?",
+          "slideDescription": "Introduction to React.js",
           "slidePoints": [
-            "Feature 1",
-            "Feature 2",
-            "Feature 3"
+            "React is a JavaScript library for building user interfaces",
+            "It is developed and maintained by Meta (Facebook)",
+            "It is component-based architecture",
+            "It uses a virtual DOM for efficient rendering"
+          ]
+        },
+        {
+          "slideIndex": 1,
+          "slideTitle": "Why React?",
+          "slideDescription": "Why React became popular",
+          "slidePoints": [
+            "Reusable components reduce duplication",
+            "Declarative UI makes code predictable",
+            "Fast rendering using Virtual DOM",
+            "Strong ecosystem and community support"
+          ]
+        },
+        {
+          "slideIndex": 2,
+          "slideTitle": "What is Virtual DOM?",
+          "slideDescription": "Understanding React rendering",
+          "slidePoints": [
+            "Virtual DOM is a lightweight copy of real DOM",
+            "React compares previous and current virtual DOM",
+            "Only changed elements are updated in real DOM",
+            "This process is called reconciliation"
+          ]
+        },
+        {
+          "slideIndex": 3,
+          "slideTitle": "Components in React",
+          "slideDescription": "Building blocks of React",
+          "slidePoints": [
+            "Functional Components (Modern standard)",
+            "Class Components (Legacy approach)",
+            "Components return JSX",
+            "Components can be reusable and nested"
+          ]
+        },
+        {
+          "slideIndex": 4,
+          "slideTitle": "JSX",
+          "slideDescription": "JavaScript XML Syntax",
+          "slidePoints": [
+            "JSX allows writing HTML inside JavaScript",
+            "JSX gets converted to React.createElement",
+            "JSX must return a single parent element",
+            "We can embed JavaScript using {}"
+          ]
+        },
+        {
+          "slideIndex": 5,
+          "slideTitle": "Props",
+          "slideDescription": "Passing data between components",
+          "slidePoints": [
+            "Props means properties",
+            "Props are read-only",
+            "Used to pass data from parent to child",
+            "Helps make components dynamic"
+          ]
+        },
+        {
+          "slideIndex": 6,
+          "slideTitle": "State",
+          "slideDescription": "Managing dynamic data",
+          "slidePoints": [
+            "State stores component-specific data",
+            "Updating state re-renders component",
+            "Managed using useState hook",
+            "State is mutable unlike props"
+          ]
+        },
+        {
+          "slideIndex": 7,
+          "slideTitle": "Hooks",
+          "slideDescription": "Using state and lifecycle in functional components",
+          "slidePoints": [
+            "useState for state management",
+            "useEffect for side effects",
+            "useContext for global state",
+            "Custom hooks for reusable logic"
+          ]
+        },
+        {
+          "slideIndex": 8,
+          "slideTitle": "React Lifecycle",
+          "slideDescription": "Component lifecycle phases",
+          "slidePoints": [
+            "Mounting (Component loads)",
+            "Updating (State or props change)",
+            "Unmounting (Component removed)",
+            "useEffect replaces lifecycle methods"
+          ]
+        },
+        {
+          "slideIndex": 9,
+          "slideTitle": "React Router",
+          "slideDescription": "Handling navigation",
+          "slidePoints": [
+            "Enables single page application routing",
+            "Routes define path and component",
+            "useParams and useNavigate hooks",
+            "Avoids full page reload"
+          ]
+        },
+        {
+          "slideIndex": 10,
+          "slideTitle": "React 19 Overview",
+          "slideDescription": "Latest Major Release",
+          "slidePoints": [
+            "React 19 focuses on performance and developer experience",
+            "Introduces Server Actions",
+            "Improved Suspense handling",
+            "Better integration with modern frameworks"
+          ]
+        },
+        {
+          "slideIndex": 11,
+          "slideTitle": "Server Actions (React 19)",
+          "slideDescription": "Direct server interaction",
+          "slidePoints": [
+            "Allows calling server functions directly from components",
+            "Reduces need for API boilerplate",
+            "Improves full-stack integration",
+            "Mainly used with frameworks like Next.js"
+          ]
+        },
+        {
+          "slideIndex": 12,
+          "slideTitle": "Improved Suspense",
+          "slideDescription": "Better async handling",
+          "slidePoints": [
+            "Handles loading states more efficiently",
+            "Better streaming support",
+            "Improved concurrent rendering",
+            "Enhances user experience"
+          ]
+        },
+        {
+          "slideIndex": 13,
+          "slideTitle": "Automatic Batching",
+          "slideDescription": "Optimized state updates",
+          "slidePoints": [
+            "Multiple state updates are batched automatically",
+            "Reduces unnecessary re-renders",
+            "Improves performance",
+            "Works across async boundaries"
+          ]
+        },
+        {
+          "slideIndex": 14,
+          "slideTitle": "Concurrent Rendering",
+          "slideDescription": "Non-blocking UI rendering",
+          "slidePoints": [
+            "Allows interruptible rendering",
+            "Keeps UI responsive",
+            "Background rendering support",
+            "Improves large application performance"
+          ]
+        },
+        {
+          "slideIndex": 15,
+          "slideTitle": "React Learning Path",
+          "slideDescription": "Complete Roadmap",
+          "slidePoints": [
+            "Learn JavaScript ES6 first",
+            "Understand Components, Props, State",
+            "Master Hooks and Routing",
+            "Learn Redux or Zustand for state management",
+            "Build real-world projects"
           ]
         }
       ]
